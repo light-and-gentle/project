@@ -1,0 +1,227 @@
+@import "common/index";
+html,body{
+  height: 100%;
+}
+.functional{
+  min-width:1340px;
+  height: 80px;
+  border-bottom: 1px solid #d3d3d4;
+  box-shadow: 0 -1px #e4e4e5;
+  position: relative;
+  @include manbg(logo);
+  background-position: 20px, 8px;
+  background-color: #fff;
+  .title{
+    position: relative;
+    display: inline-block;
+    margin-left: 301px;
+    font: bold 28px/72px '宋体' ;
+  }
+  .fun-btn{
+    width: 272px;
+    float: right;
+    margin-top:22px;
+    .icon{
+      display: inline-block;
+      width: 37px;
+      height: 38px;
+      margin-right: 40px;
+    }
+    .computer{
+      @include manbg(diannao)
+
+    }
+    .setting{
+      @include manbg(shezhi)
+    }
+    .switch{
+      @include manbg(guanbi)
+    }
+  }
+  .userinfo{
+    float: right;
+    margin: 13px 40px 0 0;
+    .avatar{
+      width: 54px;
+      height: 54px;
+      float: left;
+      margin-right:30px;
+      @include br(50%);
+      img{
+        width: 54px;
+        height: 54px;
+        @include br(50%);
+        background: #eee;
+      }
+    }
+  }
+  .login-info{
+   display: inline-block;
+    .user{
+      span{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      font: 18px/36px "Microsoft Yahei";
+    }
+    .user-name{
+      max-width: 116px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow:ellipsis;
+    }
+    .data-time{
+      font: 14px/1 'Microsoft Yahei';
+      color: #b7b6b6;
+    }
+
+  }
+}
+.main{
+  min-width:1340px;
+  position: relative;
+  //页面高度
+  min-height: 100%;
+  margin-bottom: -82px;
+  background: #ececed;
+  .sidebar{
+    position: absolute;
+    background: #33453e;
+    padding-top:5px;
+    width: 250px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    //margin-bottom: -99999px;
+    //padding-bottom: 99999px;
+    .fold-icon{
+      position: absolute;
+      width: 20px;
+      height: 31px;
+      right: -20px;
+      top: 22px;
+      @include manbg(shouqi)
+    }
+    .side-title-wrapper{
+      height: 70px;
+    }
+    .side-title{
+      //padding: 0 44px 0 36px;
+      font: 22px/70px "Microsoft Yahei";
+      color: #79cfae;
+      text-align: center;
+    }
+
+    .side-info{
+      //padding: 0 42px 0 38px;
+      font-size: 0;
+      min-height: 48px;
+      h2{
+        display: inline-block;
+        vertical-align: middle;
+        font: 20px/48px "Microsoft Yahei";
+        color: #6bb398;
+        margin: 0;
+      }
+      .side-con{
+        display: none;
+        padding-top: 2px;
+        padding-left: 38px;
+        padding-right:40px;
+        li{
+          font: 18px/66px "Microsoft Yahei";
+        }
+      }
+      .side-icon{
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 48px;
+        margin-left:38px;
+        margin-right: 16px;
+      }
+      .variety{
+        @include manbg(pinzhong);
+      }
+      .collect{
+        @include manbg(caijilu);
+      }
+      .img-info{
+        @include manbg(tuxiang)
+      }
+      .env{
+        @include manbg(huanjing)
+      }
+      .analyze{
+        @include manbg(zonghe)
+      }
+      .sys-setting{
+        @include manbg(xitong)
+      }
+      .dictionary{
+        @include manbg(shuju)
+      }
+    }
+    .active{
+      border-left: 2px solid #71c0a2;
+      color: #fff;
+      background: #14201b;
+      h2{
+        color: inherit;
+
+      }
+      .side-con{
+        display: block;
+        background: #1c2722;
+        .current{
+          @include manbg(sanjiao);
+          background-position: 13px center;
+        }
+        li{
+          padding-left: 46px;
+        }
+      }
+      .variety{
+        @include manbg(pinzhongbai);
+      }
+      .collect{
+        @include manbg(caiji);
+      }
+      .img-info{
+        @include manbg(tuxiangbai)
+      }
+      .env{
+        @include manbg(huanjingbai)
+      }
+      .analyze{
+        @include manbg(zonghebai)
+      }
+      .sys-setting{
+        @include manbg(xitongbai)
+      }
+      .dictionary{
+        @include manbg(shujubai)
+      }
+    }
+    //收起
+    &.folded{
+      width: 110px;
+      .fold-icon{
+        @include manbg(zhankai)
+      }
+      .side-title{display: none}
+      .side-tit{display: none}
+      .side-con{display: none}
+    }
+  }
+
+  .main-content{
+    //min-width: 1200px;
+    padding: 0 24px 120px 300px;
+    background: #ececed;
+
+    &.folded-main{
+      padding: 0 24px 120px 160px;
+    }
+  }
+}

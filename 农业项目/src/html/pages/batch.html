@@ -1,0 +1,531 @@
+{% extends "layout.html" %}
+{% block head %}
+<!--时间控件-->
+<link rel="stylesheet" href="assets/scss/jedate.css">
+<!-- custom scrollbar stylesheet -->
+<link rel="stylesheet" href="assets/scss/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="css/batch.css" />
+{% endblock %}
+{% block content %}
+<div class="batch-content">
+    <div class="content-head clearFix">
+        <h2 class="content-title">
+            评价批次管理
+        </h2>
+        <div class="create-batch" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="新建评价批次" >
+            新建评价批次
+        </div>
+    </div>
+    <div class="batch-list">
+        <table cellspacing="0" class="table table-condensed  table-bordered">
+            <thead>
+            <tr>
+                <td>评价批次ID</td>
+                <td>分类</td>
+                <td>评价开始时间</td>
+                <td>评价结束时间</td>
+                <td>评价地点</td>
+                <td>状态</td>
+                <td>操作</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="批次详情">详情</td>
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="批次详情">详情</td>
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="批次详情">详情</td>
+
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="批次详情">详情</td>
+
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="批次详情">详情</td>
+
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="批次详情">详情</td>
+
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="批次详情">详情</td>
+
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="批次详情">详情</td>
+
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="批次详情">详情</td>
+
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="批次详情">详情</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="page-btn">
+        <span class="prev">上页</span>
+        <span class="nun-btn nun-active">1</span>
+        <span class="nun-btn">2</span>
+        <span class="nun-btn">3</span>
+        <span class="next">下页</span>
+    </div>
+</div>
+
+<!-- 弹出模态框 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog modal-dialog-box" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="./images/manageImg/tanchuangguanbi.png" alt="">
+                </button>
+                <h4 class="modal-title" id="exampleModalLabel">新建批次</h4>
+            </div>
+            <div class="modal-body">
+                <div class="dialog-wrapper">
+                    <div class="batch-info">
+                        <h3 class="subhead">批次基本信息</h3>
+                        <div class="batch-info-tws">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">*主分类</label>
+                                    <div class="col-sm-4">
+                                        <div class="dropdown" id="batch-category">
+                                            <button style="width: 100%; position: relative;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"  aria-haspopup="true" data-toggle="dropdown" aria-expanded="true">
+                                                <span class="txt">Dropdown</span>
+                                                <img style="position: absolute; right: 5px; top: 45%;"  src="./images/manageImg/xialajiantou.png">
+                                            </button>
+                                            <ul style="width: 100%;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                <li><a href="javascript:;">Action</a></li>
+                                                <li><a href="javascript:;">Another action</a></li>
+                                                <li><a href="javascript:;">Something </a></li>
+                                                <li><a href="javascript:;">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="start" class="col-sm-2 control-label">*开始时间</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="start" placeholder="">
+                                    </div>
+                                    <label for="end" class="col-sm-2 control-label">*结束时间</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="end" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-2 control-label">*试验地</label>
+                                    <div class="col-sm-2">
+                                        <div class="dropdown" id="province">
+                                            <button style="width: 100%; position: relative;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"  aria-haspopup="true" data-toggle="dropdown" aria-expanded="true">
+                                                <span class="txt">Dropdown</span>
+                                                <img style="position: absolute; right: 5px; top: 45%;"  src="./images/manageImg/xialajiantou.png">
+                                            </button>
+                                            <ul style="width: 100%;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                <li><a href="javascript:;">Action</a></li>
+                                                <li><a href="javascript:;">Another action</a></li>
+                                                <li><a href="javascript:;">Something </a></li>
+                                                <li><a href="javascript:;">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="dropdown" id="city">
+                                            <button style="width: 100%; position: relative;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                <span class="txt">Dropdown</span>
+                                                <img style="position: absolute; right: 5px; top: 45%;" src="./images/manageImg/xialajiantou.png">
+                                            </button>
+                                            <ul style="width: 100%;" class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                <li><a href="javascript:;">Action</a></li>
+                                                <li><a href="javascript:;">Another action</a></li>
+                                                <li><a href="javascript:;">Something  </a></li>
+                                                <li><a href="javascript:;">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <label for="inputPassword3" class="col-sm-2 control-label">*设置默认大棚</label>
+                                    <div class="col-sm-4">
+                                        <div class="dropdown" id="batch-greenhouse">
+                                            <button style="width: 100%; position: relative;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"  aria-haspopup="true" data-toggle="dropdown" aria-expanded="true">
+                                                <span class="txt">Dropdown</span>
+                                                <img style="position: absolute; right: 5px; top: 45%;"  src="./images/manageImg/xialajiantou.png">
+                                            </button>
+                                            <ul style="width: 100%;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                <li><a href="javascript:;">Action</a></li>
+                                                <li><a href="javascript:;">Another action</a></li>
+                                                <li><a href="javascript:;">Something </a></li>
+                                                <li><a href="javascript:;">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group batch-number">
+                                    <label for="inputPassword3" class="col-sm-2 control-label">*批次编号</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="inputPassword3" placeholder="批次编号">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-2 control-label">*选择品种</label>
+                                </div>
+                            </form>
+
+                            <div class="variety-table" id="content-1">
+                                <table cellspacing="0" cellpadding="0" class="table table-condensed  table-bordered" >
+                                    <thead>
+                                    <tr>
+                                        <td>品种ID</td>
+                                        <td>品种名称</td>
+                                        <td>评估品种编号</td>
+                                        <td>设置为参照CK</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <input class="magic-checkbox" type="checkbox" name="layout" id="c1" >
+                                            <label for="c1">1001</label>
+                                        </td>
+                                        <td>真善美</td>
+                                        <td>
+                                            <input class="serial-number" type="text" disabled>
+                                        </td>
+                                        <td>
+                                            <input class="magic-checkbox-circle" type="checkbox" name="layout" id="c01" disabled>
+                                            <label for="c01"></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="magic-checkbox" type="checkbox" name="layout" id="c2">
+                                            <label for="c2">1001</label>
+                                        </td>
+                                        <td>真善美</td>
+                                        <td>
+                                            <input class="serial-number" type="text">
+                                        </td>
+                                        <td>
+                                            <input class="magic-checkbox-circle" type="checkbox" name="layout" id="c02" >
+                                            <label for="c02"></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="magic-checkbox" type="checkbox" name="layout" id="c3">
+                                            <label for="c3">1001</label>
+                                        </td>
+                                        <td>真善美</td>
+                                        <td>
+                                            <input class="serial-number" type="text">
+                                        </td>
+                                        <td>
+                                            <input class="magic-checkbox-circle" type="checkbox" name="layout" id="c03" >
+                                            <label for="c03"></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="magic-checkbox" type="checkbox" name="layout" id="c4">
+                                            <label for="c4">1001</label>
+                                        </td>
+                                        <td>真善美</td>
+                                        <td>
+                                            <input class="serial-number" type="text">
+                                        </td>
+                                        <td>
+                                            <input class="magic-checkbox-circle" type="checkbox" name="layout" id="c04" >
+                                            <label for="c04"></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="magic-checkbox" type="checkbox" name="layout" id="c5">
+                                            <label for="c5">1001</label>
+                                        </td>
+                                        <td>真善美</td>
+                                        <td>
+                                            <input class="serial-number" type="text">
+                                        </td>
+                                        <td>
+                                            <input class="magic-checkbox-circle" type="checkbox" name="layout" id="c05" >
+                                            <label for="c05"></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="magic-checkbox" type="checkbox" name="layout" id="c6">
+                                            <label for="c6">1001</label>
+                                        </td>
+                                        <td>真善美</td>
+                                        <td>
+                                            <input class="serial-number" type="text">
+                                        </td>
+                                        <td>
+                                            <input class="magic-checkbox-circle" type="checkbox" name="layout" id="c06" >
+                                            <label for="c06"></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="magic-checkbox" type="checkbox" name="layout" id="c7">
+                                            <label for="c7">1001</label>
+                                        </td>
+                                        <td>真善美</td>
+                                        <td>
+                                            <input class="serial-number" type="text">
+                                        </td>
+                                        <td>
+                                            <input class="magic-checkbox-circle" type="checkbox" name="layout" id="c07" >
+                                            <label for="c07"></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="magic-checkbox" type="checkbox" name="layout" id="c8">
+                                            <label for="c8">1001</label>
+                                        </td>
+                                        <td>真善美</td>
+                                        <td>
+                                            <input class="serial-number" type="text">
+                                        </td>
+                                        <td>
+                                            <input class="magic-checkbox-circle" type="checkbox" name="layout" id="c08" >
+                                            <label for="c08"></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="magic-checkbox" type="checkbox" name="layout" id="c9">
+                                            <label for="c9">1001</label>
+                                        </td>
+                                        <td>真善美</td>
+                                        <td>
+                                            <input class="serial-number" type="text">
+                                        </td>
+                                        <td>
+                                            <input class="magic-checkbox-circle" type="checkbox" name="layout" id="c09" >
+                                            <label for="c09"></label>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="target-info">
+                        <h3 class="subhead">指标信息</h3>
+                        <div class="quantity">
+                            <span class="asterisk">*量化指标</span>
+                            <div class="sim-check clearFix">
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c01">
+                                <label for="c01">果脐大小</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c02">
+                                <label for="c02">抗逆性</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c03">
+                                <label for="c03">抗病虫性</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c04">
+                                <label for="c04">抗病虫性</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c05">
+                                <label for="c05">产量</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c06">
+                                <label for="c06">糖度</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c07">
+                                <label for="c07">硬度</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c08">
+                                <label for="c08">节间长</label>
+                            </div>
+                        </div>
+                        <div class="describe">
+                            <span class="asterisk">*描述指标</span>
+                            <div class="sim-check clearFix">
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c001">
+                                <label for="c001">生育期</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c002">
+                                <label for="c002">熟性</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c003">
+                                <label for="c003">生长习性</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c004">
+                                <label for="c004">始花节位</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c005">
+                                <label for="c005">果形</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c006">
+                                <label for="c006">单果重</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c007">
+                                <label for="c007">硬成熟果皮色度</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c008">
+                                <label for="c008">果面特征</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c009">
+                                <label for="c009">肉质</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c010">
+                                <label for="c010">风味</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c011">
+                                <label for="c011">用途</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c012">
+                                <label for="c012">栽培季节</label>
+                                <input class="magic-checkbox" type="checkbox" name="layout" id="c013">
+                                <label for="c013">货架期</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-e79cfae btn-lg center-block">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block foot %}
+<script src="assets/js/jquery.jedate.min.js"></script>
+<!-- custom scrollbar plugin -->
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript">
+
+    //日期范围限制
+    var start = {
+        skinCell: 'jedategreen',
+        format: 'YYYY-MM-DD hh:mm:ss',
+        minDate: $.nowDate(0), //设定最小日期为当前日期
+        //isinitVal:true,
+        maxDate: '2099-06-16 23:59:59', //最大日期
+        choosefun: function(elem,datas){
+            end.minDate = datas; //开始日选好后，重置结束日的最小日期
+        }
+    };
+    var end = {
+        skinCell: 'jedategreen',
+        format: 'YYYY-MM-DD hh:mm:ss',
+        minDate: $.nowDate(0), //设定最小日期为当前日期
+        //isinitVal:true,
+        maxDate: '2099-06-16 23:59:59', //最大日期
+        choosefun: function(elem,datas){
+            start.maxDate = datas; //将结束日的初始值设定为开始日的最大日期
+        }
+    };
+    $("#start").click(function () {
+        $('#jedatebox').show()
+    }).jeDate(start);
+    $("#end").click(function () {
+        $('#jedatebox').show()
+    }).jeDate(end);
+//   模态框
+    $('#exampleModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var recipient = button.data('whatever');
+
+        var modal = $(this);
+        if(recipient != '新建评价批次'){
+            $('.batch-number').show();
+        }else {
+            $('.batch-number').hide();
+        }
+        modal.find('.modal-title').text(recipient)
+    }).scroll(function () {
+        $('#jedatebox').hide()
+    });
+//  scrollbar
+    $("#content-1").mCustomScrollbar({
+        theme:"minimal"
+    });
+//    下拉菜单
+    $('#batch-category').on('click', function () {
+        var _seft = $(this);
+        var obutton = _seft.find('button').find('.txt');
+        _seft.find('li').on('click', function(ev){
+            obutton.html($(this).html());
+        })
+    });
+    $('#province').on('click', function () {
+        var _seft = $(this);
+        var obutton = _seft.find('button').find('.txt');
+        _seft.find('li').on('click', function(ev){
+            obutton.html($(this).html());
+        })
+    });
+    $('#classify-dropdown').on('click', function () {
+        var _seft = $(this);
+        var obutton = _seft.find('button').find('.txt');
+        _seft.find('li').on('click', function(ev){
+            obutton.html($(this).html());
+        })
+    });
+    $('#batch-greenhouse').on('click', function () {
+        var _seft = $(this);
+        var obutton = _seft.find('button').find('.txt');
+        _seft.find('li').on('click', function(ev){
+            obutton.html($(this).html());
+        })
+    })
+</script>
+{% endblock %}

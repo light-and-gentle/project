@@ -1,0 +1,15 @@
+@mixin bg($name){
+  background:url("../images/login/"+ $name +".png") no-repeat center center;
+}
+@mixin manbg($name){
+  background: url("../images/manageImg/"+ $name +".png") no-repeat center center;
+}
+@mixin bs($c1:#cdcdce){
+  box-shadow: 0 5px 5px $c1,0 -5px 5px $c1,5px 0 5px $c1, -5px 0 5px $c1;
+}
+@mixin bts($c1:#e4e4e5,$c2:#c9e3da){
+  box-shadow: 5px 0  5px $c1, -5px 0  5px $c1, 0 -5px 5px $c2,0 5px 5px $c1;
+}
+@mixin br($nun:8px){
+  border-radius: $nun;
+}

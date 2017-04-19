@@ -1,0 +1,446 @@
+{% extends "layout.html" %}
+{% block head %}
+<link rel="stylesheet" href="css/public.css" />
+<link rel="stylesheet" href="css/collection.css" />
+{% endblock %}
+{% block content %}
+<div class="content-head clearfix">
+    <h2 class="content-title">
+        指标库管理
+    </h2>
+    <div class="create-item" id="create-item" data-toggle="modal" data-target="#collect-modal" data-whatever="新建指标" data-backdrop="static">
+        新建指标
+    </div>
+</div>
+<div class="item-info">
+    <div class="option-info">
+        <span class="category">分类</span>
+        <div class="opt">
+            <input class="magic-radio" type="radio" name="radio" id="r1" value="option1" checked>
+            <label for="r1">番茄</label>
+        </div>
+        <div class="opt">
+            <input class="magic-radio" type="radio" name="radio" id="r2" value="option2" >
+            <label for="r2">黄瓜</label>
+        </div>
+    </div>
+    <form class=" form-inline">
+        <div class="form-group">
+            <label for="" class="control-label">标题</label>
+            <input type="text" class="form-control common-border text-center" id="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="" class="control-label">标签</label>
+            <div class="form-control common-border">
+                <div class="dropdown hidden-xs" id="collect-lable-dropdown" style="width: 100%">
+                    <button style="width: 100%; position: relative;" class="btn btn-default dropdown-toggle " type="button" id="dropdownMenu1"  aria-haspopup="true" data-toggle="dropdown" aria-expanded="true">
+                        <span class="txt">Dropdown</span>
+                        <img style="position: absolute; right: 5px; top: 45%;"  src="./images/manageImg/xialajiantou.png">
+                    </button>
+                    <ul style="width: 100%;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a data-value='111'href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something </a></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label for="" class="control-label">指标类型</label>
+            <div class="form-control common-border">
+                <div class="dropdown hidden-xs" id="collect-indicator" style="width: 100%">
+                <button style="width: 100%; position: relative;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"  aria-haspopup="true" data-toggle="dropdown" aria-expanded="true">
+                    <span class="txt">Dropdown</span>
+                    <img style="position: absolute; right: 5px; top: 45%;"  src="./images/manageImg/xialajiantou.png">
+                </button>
+                <ul style="width: 100%;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a data-value='111'href="javascript:;">Action</a></li>
+                    <li><a href="javascript:;">Another action</a></li>
+                    <li><a href="javascript:;">Something </a></li>
+                    <li><a href="javascript:;">Separated link</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="control-label">状态</label>
+           <div class="form-control common-border">
+               <div class="dropdown " id="collect-state" style="width: 100%">
+               <button style="width: 100%; position: relative;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"  aria-haspopup="true" data-toggle="dropdown" aria-expanded="true">
+                   <span class="txt">Dropdown</span>
+                   <img style="position: absolute; right: 5px; top: 45%;"  src="./images/manageImg/xialajiantou.png">
+               </button>
+               <ul style="width: 100%;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                   <li><a data-value='111'href="javascript:;">Action</a></li>
+                   <li><a href="javascript:;">Another action</a></li>
+                   <li><a href="javascript:;">Something </a></li>
+                   <li><a href="javascript:;">Separated link</a></li>
+               </ul>
+           </div>
+           </div>
+        </div>
+        <button  type="button" class="btn btn-check">查询</button>
+    </form>
+
+</div>
+<div class="indicator-list">
+    <table cellspacing="0" cellpadding="0" class="table table-condensed  table-bordered" >
+        <thead class="sample-list-title">
+        <tr>
+            <td>指标ID</td>
+            <td>标题</td>
+            <td>标签</td>
+            <td>题目类型</td>
+            <td>前端排序</td>
+            <td>状态</td>
+            <td >操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>100001</td>
+            <td>生育期</td>
+            <td>无</td>
+            <td>描述指标</td>
+            <td><input type="text" class="list-common-border"> </td>
+            <td><span class="efficient">已生效</span></td>
+            <td class="last-td">
+                <button type="button" class="status-btn">失效</button>
+                <button type="button" class="detail" data-toggle="modal" data-target="#collect-modal" data-backdrop="static" data-whatever="查看指标" >详细</button>
+                <button type="button" class="del" data-toggle="modal" data-target="#modal-sm" data-backdrop="static" data-whatever="删除" disabled>删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>100002</td>
+            <td>熟性</td>
+            <td>无</td>
+            <td>描述指标</td>
+            <td><input type="text" class="list-common-border"></td>
+            <td><span class="efficient">已生效</span></td>
+            <td class="last-td">
+                <button  type="button" class="status-btn">失效</button>
+                <button  type="button" class="detail" data-toggle="modal" data-target="#collect-modal" data-backdrop="static" data-whatever="查看指标">详细</button>
+                <button  type="button" class="del" data-toggle="modal" data-target="#modal-sm" data-backdrop="static" data-whatever="删除">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>100003</td>
+            <td>生长习性</td>
+            <td>无</td>
+            <td>描述指标</td>
+            <td><input type="text" class="list-common-border"></td>
+            <td><span class="efficient">已生效</span></td>
+            <td class="last-td">
+                <button  type="button" class="status-btn">失效</button>
+                <button  type="button" class="detail" data-toggle="modal" data-target="#collect-modal" data-backdrop="static" data-whatever="查看指标">详细</button>
+                <button  type="button" class="del" data-toggle="modal" data-target="#modal-sm" data-backdrop="static" data-whatever="删除">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>100004</td>
+            <td>始花节位</td>
+            <td>无</td>
+            <td>描述指标</td>
+            <td><input type="text" class="list-common-border"></td>
+            <td><span class="efficient">未生效</span></td>
+            <td class="last-td">
+                <button  type="button" class="status-btn">失效</button>
+                <button  type="button" class="detail" data-toggle="modal" data-target="#collect-modal" data-backdrop="static" data-whatever="查看指标">详细</button>
+                <button  type="button" class="del" data-toggle="modal" data-target="#modal-sm" data-backdrop="static" data-whatever="删除">删除</button>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+<div class="page-btn">
+    <span class="prev">上页</span>
+    <span class="nun-btn nun-active">1</span>
+    <span class="nun-btn">2</span>
+    <span class="nun-btn">3</span>
+    <span class="next">下页</span>
+</div>
+<!-- 新建和详情对应的模态框（Modal） -->
+<div class="modal fade" id="collect-modal" tabindex="-1" role="dialog" aria-labelledby="collect-modalLabel">
+        <div class="modal-dialog modal-dialog-box" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="./images/manageImg/tanchuangguanbi.png" alt="">
+                    </button>
+                    <h4 class="modal-title" id="collect-modalLabel">新建指标</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label " style="text-align: left;">分类</label>
+                            <div class="col-sm-6">
+                                <div class="dropdown" id="collect-dialog-classify">
+                                    <button class="btn btn-default dropdown-toggle"  type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        <span class="txt">Dropdown</span>
+                                        <img style="position: absolute; right: 5px; top: 45%;" src="./images/manageImg/xialajiantou.png">
+                                    </button>
+                                    <ul style="width: 100%" class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something  </a></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label fruit"><span class="fruit-icon"></span>果实</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label text-left">指标类型</label>
+                            <div class="col-sm-10">
+                                <div class="opt">
+                                    <input class="magic-radio" type="radio" name="radio-target" id="describe" value="option3" checked>
+                                    <label for="describe">描述指标</label>
+                                </div>
+                                <div class="opt">
+                                    <input class="magic-radio" type="radio" name="radio-target" id="quantile" value="option4" >
+                                    <label for="quantile">量化指标</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">指标标题</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control " id="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group describe-box">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">选项A</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">选项B</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control " id="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group elidible-option">
+                                <label for="inputEmail3" class="col-sm-2 control-label">选项C</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control " id="" placeholder="">
+                                </div>
+                                <button  id="del" class="col-sm-2 btn del-option " type="button">删除</button>
+                            </div>
+                            <div class="form-group last-option">
+                                <label for="inputEmail3" class="col-sm-2 control-label"></label>
+                                <div class="col-sm-8">
+                                    <button type="button" class="add-option"> 添加选项</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label"><span class="like-icon"></span>喜好收藏</label>
+                            </div>
+                        </div>
+                        <!--量化指标-->
+                        <div class="form-group quantile-box">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">选项A</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control " id="" placeholder="">
+                                </div>
+                                <label for="inputEmail3" class="col-sm-2 control-label">得分</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control " id="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">选项B</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control " id="" placeholder="">
+                                </div>
+                                <label for="inputEmail3" class="col-sm-2 control-label">得分</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control " id="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">选项C</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="" placeholder="">
+                                </div>
+                                <label for="inputEmail3" class="col-sm-2 control-label">得分</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control " id="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">选项D</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control " id="" placeholder="">
+                                </div>
+                                <label for="inputEmail3" class="col-sm-2 control-label">得分</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">选项E</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="" placeholder="">
+                                </div>
+                                <label for="inputEmail3" class="col-sm-2 control-label">得分</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="save-btn" class="btn btn-e79cfae btn-lg center-block">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Small modal -->
+<div id="modal-sm" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3 style="text-align: center;">您确定要删除吗？</h3>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <button type="button" class="btn btn-default"  role="button">确定</button>
+                <button type="button" class="btn btn-default"  role="button"  data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block foot %}
+<script type="text/javascript">
+    //   新建及编辑模态框
+    $('#collect-modal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var recipient = button.data('whatever');
+        var modal = $(this);
+//        查看详情
+        if(recipient != '新建指标'){
+            $('#collect-dialog-classify').find('button').attr("disabled","disabled");
+            modal.find('.form-control').addClass('dis').attr('disabled', "disabled");
+            $('.add-option').hide();
+            $('.del-option').hide();
+            $('#save-btn').hide();
+            $('.fruit-icon').addClass('check-fruit-icon');
+            $('.like-icon').addClass('check-like-icon');
+        }else {
+            $('#collect-dialog-classify').find('button').removeAttr("disabled");
+            modal.find('.form-control').removeClass('dis').removeAttr("disabled");
+            $('.add-option').show();
+            $('.del-option').show();
+            $('#save-btn').show();
+            $('.fruit-icon').removeClass('check-fruit-icon').click(function () {
+                $(this).toggleClass('check-fruit-icon')
+            });
+            $('.like-icon').removeClass('check-like-icon').click(function () {
+                $(this).toggleClass('check-like-icon')
+            });
+        }
+        modal.find('.modal-title').text(recipient);
+    });
+//    页面下拉菜单
+        $('#collect-lable-dropdown').one('show.bs.dropdown', function () {
+            var _seft = $(this);
+            var obutton = _seft.find('button').find('.txt');
+            _seft.find('li').on('click', function(ev){
+                obutton.html($(this).html());
+            })
+        });
+
+        $(' #collect-indicator').one('show.bs.dropdown', function () {
+            var _seft = $(this);
+            var obutton = _seft.find('button').find('.txt');
+            _seft.find('li').on('click', function(ev){
+                obutton.html($(this).html());
+            })
+        });
+        $('#collect-state').one('show.bs.dropdown', function () {
+            var _seft = $(this);
+            var obutton = _seft.find('button').find('.txt');
+            _seft.find('li').on('click', function(ev){
+                obutton.html($(this).html());
+            })
+        });
+//    模态框内下拉菜单
+    $('#collect-dialog-classify').one('show.bs.dropdown', function () {
+        var _seft = $(this);
+        var obutton = _seft.find('button').find('.txt');
+        _seft.find('li').on('click', function(ev){
+            obutton.html($(this).html());
+        })
+    });
+// 弹框内指标类切换
+    $("#describe").click(function () {
+        if($(this).prop('checked')){
+            $('.describe-box').show();
+            $('.quantile-box').hide();
+        }
+    });
+    $("#quantile").click(function () {
+        if($(this).prop('checked')){
+            $('.describe-box').hide();
+            $('.quantile-box').show();
+        }
+    });
+    var num = 67;
+    var optionletter = '';
+//    添加选项及删除
+    $('.form-group').on(
+            'click',
+            '.del-option',
+            {num},
+            removeoption);
+
+//    添加选项
+
+    $('.add-option').click(function () {
+        $("#del").remove();
+        num++;
+        optionletter = String.fromCharCode(num);
+        $('.last-option').before('<div class="form-group elidible-option">\
+        <label for="inputEmail3" class="col-sm-2 control-label">选项'+optionletter+'</label>\
+                <div class="col-sm-8">\
+                <input type="text" class="form-control " id="" placeholder="">\
+                </div>\
+                <button id="del" class="col-sm-2 btn del-option " type="button">删除</button>\
+                </div>');
+    });
+//    删除
+    function removeoption(){
+        $(this).parents('.elidible-option').remove();
+        $('.elidible-option:last').append('<button id="del" class="col-sm-2 btn del-option " type="button">删除</button>');
+        num--;
+    }
+//
+
+
+
+//    小弹框位置
+    $('#modal-sm').on('shown.bs.modal', function (e) {
+        $(this).modal({backdrop: 'static', keyboard: false});
+        $(this).css('display', 'block');
+        var modalHeight=$(window).height() / 2 - $('#modal-sm .modal-dialog').height() / 2;
+        $(this).find('.modal-dialog').css({
+            'margin-top': modalHeight
+        });
+    });
+
+
+</script>
+{% endblock %}

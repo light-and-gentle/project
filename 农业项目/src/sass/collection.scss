@@ -1,0 +1,210 @@
+@import "common/index";
+body {
+  //padding-right:0!important;
+}
+
+.item-info {
+    padding: 32px 50px;
+    background: #fff;
+    @include br();
+    @include bs();
+    .category {
+      display: inline-block;
+      font: 22px/62px 'Microsoft Yahei';
+      vertical-align: middle;
+    }
+
+  }
+.form-inline{
+  .form-group {
+    label {
+      font-size: 20px;
+      font-weight: normal;
+      color: #333;
+    }
+    .form-control {
+      width: 125px !important;
+      height: 32px;
+      box-sizing: border-box;
+      border: 1px solid #777;
+      font-size: 18px;
+      @include br(12px);
+      margin: 10px 30px 0 20px;
+      padding: 0 !important;
+    }
+  }
+}
+.dropdown-menu a,.txt a{
+    color: #3a3b3b;
+    text-decoration: none;
+  }
+  #collect-lable-dropdown.dropdown .btn,
+  #collect-indicator.dropdown .btn,
+  #collect-state.dropdown .btn{
+    width: 100%;
+    position: relative;
+    height: 30px!important;
+    border:none!important;
+    border-radius: 10px!important;
+  }
+  .status-btn{
+    color: #FC6B6B;
+  }
+  .detail,.efficient{
+    color: #79B0CF;
+  }
+.efficient.ineffective{
+  color: #B6B5B5;
+}
+  .del{
+    color: #79CFAE;
+    &[disabled]{
+      color: #B6B5B5;
+    }
+  }
+  .btn-check{
+    float: right;
+    width: 131px;
+    font: 20px/30px 'Microsoft Yahei';
+    color: #fff;
+    text-align: center;
+    background: #79cfae;
+    @include br();
+    @include bs(#d7f1e7);
+  }
+  //单选
+  .opt {
+    display: inline-block;
+    margin-left: 36px;
+    vertical-align: middle;
+    @media (max-width: 1366px) {
+      margin-left: 20px;
+    }
+  }
+  .list-common-border{
+    width: 102px;
+    height: 30px;
+    border: 1px solid #777;
+    font-size: 16px;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+
+  //新建和详情对应的模态框
+  .modal-dialog.modal-dialog-box {
+    width: 745px;
+  }
+  .modal-dialog.modal-dialog-box .modal-header {
+    padding: 45px 58px;
+    border-bottom: none;
+    margin-bottom: 15px;
+  }
+  .modal-dialog.modal-dialog-box .modal-title {
+    font-size: 28px;
+    color: #1c1d1d;
+  }
+  .modal-dialog.modal-dialog-box .modal-body {
+    padding: 0 86px;
+    label{
+      font-size: 18px;
+      font-weight: normal;
+      color: #1C1D1D;
+    }
+  }
+  .modal-dialog.modal-dialog-box .modal-content {
+    @include br(20px);
+    padding-bottom: 18px;
+  }
+  .modal-dialog.modal-dialog-box .close {
+    opacity: 1;
+  }
+  .modal-dialog.modal-dialog-box .modal-body .form-group {
+    margin-bottom: 30px;
+  }
+.dis{
+  background-color: #f3f2f2;
+}
+  .modal-dialog.modal-dialog-box .modal-body .form-control {
+    height: 30px;
+    @include br(10px);
+  }
+  .modal-dialog.modal-dialog-box .modal-content .modal-footer {
+    border-top: none;
+    padding: 40px;
+  }
+  .btn-e79cfae {
+    color: #fff;
+    background-color: #79cfae;
+    border-color: #79cfae;
+    border-radius: 16px;
+    min-width: 308px;
+  }
+  .modal-dialog.modal-dialog-box .modal-body .form-horizontal .control-label {
+    white-space: nowrap;
+  }
+  //弹框内下拉菜单
+  #collect-dialog-classify.dropdown .btn{
+    width: 100%;
+    position: relative;
+    height: 30px!important;
+    border-radius: 10px!important;
+  }
+  #collect-modal{
+    .fruit-icon{
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      border: 1px solid #777;
+      @include br(5px)
+    }
+    .check-fruit-icon{
+      border: none;
+      @include manbg(guoshixuanzhong)
+    }
+    .like-icon{
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      @include manbg(xihao)
+    }
+    .check-like-icon{
+      @include manbg(xinxuanzhong)
+    }
+  .del-option{
+    background: none;
+    font-size: 22px;
+    color: #FC6B6B;
+  }
+  .add-option{
+    background: none;
+    font-size: 22px;
+    color: #79B0CF;
+  }
+  .quantile-box{
+    display: none;
+  }
+}
+  //小模态框
+  #modal-sm {
+    .modal-dialog-box{
+      width: 662px;
+    }
+    .btn{
+      height: 30px;
+      line-height: 30px;
+      border-radius: 10px;
+      &:first-child{
+        color: #fff;
+        background-color: #79cfae;
+        border-color: #79cfae;
+      }
+    }
+    .modal-footer{
+      border-top:none;
+    }
+  }
+
+

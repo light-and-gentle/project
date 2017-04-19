@@ -1,0 +1,157 @@
+@import "common/index";
+.content-head {
+  .content-title {
+    float: left;
+    margin: 0;
+    padding-top: 4px;
+    font: bold 26px/94px '宋体';
+    vertical-align: middle;
+  }
+  .create-item {
+    float: right;
+    margin: 33px 50px 0 0;
+    padding: 0 23px 0 29px;
+    font: 20px/34px '宋体';
+    color: #fff;
+    background: #fc6b6b;
+    @include br();
+    @include bs(#f1c5c6);
+    cursor: pointer;
+  }
+}
+.indicator-list {
+  margin-top: 40px;
+  overflow: hidden;
+  @include bts();
+  @include br();
+  table {
+    margin: 0;
+  }
+  thead {
+    background: #79cfae;
+    td {
+      font: 18px/40px 'Microsoft Yahei';
+      padding: 0;
+      height: 40px;
+      color: #fff;
+      text-align: center;
+    }
+  }
+  tbody {
+    background: #fff;
+    tr {
+      height: 84px;
+      text-align: center;
+      td {
+        font: 18px/84px 'Microsoft Yahei';
+        padding: 0;
+      }
+    }
+  }
+  .last-td{
+    button{
+      display: inline-block;
+      background: none;
+      margin: 0 10px;
+    }
+  }
+
+}
+.page-btn {
+  text-align: center;
+  margin-top: 106px;
+  span {
+    display: inline-block;
+    margin: 0 5px;
+    font: 22px/44px 'Microsoft Yahei';
+    box-shadow: 0 5px 5px #cdcdcd;
+  }
+  .nun-btn {
+    width: 44px;
+    height: 44px;
+    @include br(50%);
+    background: #fff;
+    color: #777;
+    text-align: center;
+    cursor: pointer;
+  }
+  .nun-active {
+    background: #79cfae;
+    box-shadow: 0 5px 5px #dbe6e3;
+    color: #fff;
+  }
+  .prev, .next {
+    padding: 0 24px 0 20px;
+    @include br(16px);
+    background: #fff;
+    cursor: pointer;
+  }
+}
+//单选按钮
+.magic-radio {
+  position: absolute;
+  display: none;
+}
+.magic-radio + label {
+  font: 22PX/62PX 'Microsoft Yahei';
+  color: #333;
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.magic-radio + label:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -9px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  @include br(50%);
+  content: '';
+  border: 1px solid #7a7a7a;
+}
+.magic-radio:checked + label:before {
+  border: 1px solid #bce7d6;
+  background: #79cfae;
+}
+//复选框
+.magic-checkbox {
+  position: absolute;
+  display: none;
+}
+.magic-checkbox + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 28px;
+  cursor: pointer;
+  margin: 0;
+  vertical-align: middle;
+  font: 18PX/54PX 'Microsoft Yahei';
+  color: #4e4e4e;
+  @media ( max-width: 1366px) {
+    font-size: 16px;
+  }
+}
+.magic-checkbox + label:before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 0;
+  margin-top: -10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 3px;
+}
+.magic-checkbox:checked + label:before {
+  border-color: #79cfae;
+  @include manbg(gouxuan)
+}
+.magic-checkbox[disabled] + label {
+  cursor: not-allowed;
+  color: #e4e4e4;
+}

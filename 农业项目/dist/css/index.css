@@ -1,0 +1,383 @@
+@charset "UTF-8";
+.clearFix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearFix {
+  zoom: 1; }
+
+body {
+  background: #ececed; }
+
+.variety-content .content-head {
+  height: 98px; }
+  .variety-content .content-head .content-title {
+    float: left;
+    margin: 0;
+    padding-top: 4px;
+    font: bold 26px/96px '宋体';
+    vertical-align: middle; }
+  .variety-content .content-head .create-variety {
+    float: right;
+    margin: 33px 50px 0 0;
+    padding: 0 23px 0 29px;
+    font: 20px/34px '宋体';
+    color: #fff;
+    background: #fc6b6b;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px #f1c5c6, 0 -5px 5px #f1c5c6, 5px 0 5px #f1c5c6, -5px 0 5px #f1c5c6;
+    cursor: pointer; }
+
+.variety-content .variety-info {
+  box-sizing: border-box;
+  height: 120px;
+  font-size: 0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 5px 0  5px #e4e4e5, -5px 0  5px #e4e4e5, 0 -5px 5px #e4e4e5,0 5px 5px #e4e4e5;
+  padding: 42px 3.13%; }
+  .variety-content .variety-info div {
+    vertical-align: middle;
+    font-size: 16px;
+    display: inline-block; }
+  .variety-content .variety-info .common-border {
+    width: 125px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #777;
+    font-size: 16px;
+    border-radius: 12px;
+    padding-left: 13px; }
+    @media (max-width: 1366px) {
+      .variety-content .variety-info .common-border {
+        width: 100px;
+        font-size: 12px; } }
+  .variety-content .variety-info .r-distance {
+    margin-right: 36px; }
+    @media (max-width: 1366px) {
+      .variety-content .variety-info .r-distance {
+        margin-right: 15px; } }
+  .variety-content .variety-info .common-padding {
+    margin: 0 58px 0 36px; }
+    @media (max-width: 1366px) {
+      .variety-content .variety-info .common-padding {
+        margin: 0 20px 0 10px; } }
+  .variety-content .variety-info .fix-width {
+    width: 125px;
+    height: 30px;
+    box-sizing: border-box; }
+    @media (max-width: 1366px) {
+      .variety-content .variety-info .fix-width {
+        width: 100px; } }
+  .variety-content .variety-info .check {
+    float: right;
+    width: 8.21%;
+    height: 34px;
+    font: 20px/34px 'Microsoft Yahei';
+    text-align: center;
+    color: #fff;
+    border-radius: 8px;
+    background: #79cfae;
+    box-shadow: 5px 0  5px #d7f1e7, -5px 0  5px #d7f1e7, 0 -5px 5px #d7f1e7,0 5px 5px #d7f1e7;
+    cursor: pointer; }
+
+.variety-content .sample-list {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 40px;
+  box-shadow: 5px 0  5px #e4e4e5, -5px 0  5px #e4e4e5, 0 -5px 5px #c9e3da,0 5px 5px #e4e4e5;
+  background: #fff; }
+  .variety-content .sample-list table {
+    text-align: center;
+    margin-bottom: 0; }
+  .variety-content .sample-list .sample-list-title {
+    background: #79cfae;
+    letter-spacing: 8px; }
+    .variety-content .sample-list .sample-list-title td {
+      height: 70px;
+      font: 22px/70px "Microsoft Yahei";
+      color: #fff;
+      text-align: center; }
+  .variety-content .sample-list tbody tr {
+    height: 120px; }
+    .variety-content .sample-list tbody tr td {
+      font-size: 26px;
+      color: #333;
+      vertical-align: middle; }
+    .variety-content .sample-list tbody tr img {
+      width: 120px;
+      height: 80px;
+      border-radius: 16px;
+      background: #eee;
+      cursor: default; }
+    .variety-content .sample-list tbody tr input {
+      width: 102px;
+      height: 30px;
+      border: 1px solid #777;
+      border-radius: 12px;
+      font-size: 18px;
+      text-align: center; }
+    .variety-content .sample-list tbody tr .last-child {
+      color: #79b0cf;
+      cursor: pointer; }
+
+.variety-content .page-btn {
+  text-align: center;
+  margin-top: 123px; }
+  .variety-content .page-btn span {
+    display: inline-block;
+    margin: 0 5px;
+    font: 22px/44px 'Microsoft Yahei';
+    box-shadow: 0 5px 5px #cdcdcd; }
+  .variety-content .page-btn .nun-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #fff;
+    color: #777;
+    text-align: center;
+    cursor: pointer; }
+  .variety-content .page-btn .nun-active {
+    background: #79cfae;
+    box-shadow: 0 5px 5px #dbe6e3;
+    color: #fff; }
+  .variety-content .page-btn .prev, .variety-content .page-btn .next {
+    padding: 0 24px 0 20px;
+    border-radius: 16px;
+    background: #fff;
+    cursor: pointer; }
+
+#exampleModal .modal-dialog.modal-dialog-box {
+  width: 1280px; }
+  @media (max-width: 1366px) {
+    #exampleModal .modal-dialog.modal-dialog-box {
+      width: 900px; } }
+  #exampleModal .modal-dialog.modal-dialog-box .modal-header {
+    padding: 45px 58px;
+    border-bottom: none;
+    margin-bottom: 15px; }
+  #exampleModal .modal-dialog.modal-dialog-box .close {
+    opacity: 1; }
+  #exampleModal .modal-dialog.modal-dialog-box .modal-title {
+    font-size: 28px;
+    color: #1c1d1d; }
+  #exampleModal .modal-dialog.modal-dialog-box .modal-body {
+    padding: 0 50px; }
+    #exampleModal .modal-dialog.modal-dialog-box .modal-body .species-info {
+      height: 84px;
+      font-size: 0; }
+      #exampleModal .modal-dialog.modal-dialog-box .modal-body .species-info div {
+        display: inline-block;
+        font-size: 22px;
+        vertical-align: middle; }
+      #exampleModal .modal-dialog.modal-dialog-box .modal-body .species-info .common-border {
+        width: 125px;
+        height: 30px;
+        margin: 0 58px 0 36px;
+        box-sizing: border-box;
+        border: 1px solid #777;
+        font-size: 18px;
+        vertical-align: middle;
+        border-radius: 12px;
+        padding-left: 13px; }
+        @media (max-width: 1366px) {
+          #exampleModal .modal-dialog.modal-dialog-box .modal-body .species-info .common-border {
+            width: 120px;
+            margin: 0 35px 0 20px; } }
+      #exampleModal .modal-dialog.modal-dialog-box .modal-body .species-info .fix-width {
+        width: 125px;
+        height: 30px;
+        margin: 0 58px 0 36px; }
+        @media (max-width: 1366px) {
+          #exampleModal .modal-dialog.modal-dialog-box .modal-body .species-info .fix-width {
+            width: 120px;
+            margin: 0 35px 0 20px; } }
+      #exampleModal .modal-dialog.modal-dialog-box .modal-body .species-info .unique-num {
+        border: none;
+        background: #f3f2f2;
+        color: #969696; }
+    #exampleModal .modal-dialog.modal-dialog-box .modal-body .intro .subhead {
+      font: 22px/42px "Microsoft Yahei";
+      margin: 0;
+      color: #333; }
+    #exampleModal .modal-dialog.modal-dialog-box .modal-body .intro textarea {
+      outline: none;
+      resize: none;
+      width: 100%;
+      height: 164px;
+      border: 1px solid #777;
+      box-sizing: border-box;
+      padding: 16px;
+      margin-top: 24px;
+      border-radius: 18px; }
+    #exampleModal .modal-dialog.modal-dialog-box .modal-body .property {
+      width: 100%;
+      margin-top: 26px; }
+      #exampleModal .modal-dialog.modal-dialog-box .modal-body .property .property-list {
+        margin-top: 24px;
+        box-sizing: border-box;
+        border-radius: 16px;
+        box-shadow: 0 5px 5px #d7f1e7,0 -5px 5px #d7f1e7,5px 0 5px #d7f1e7, -5px 0 5px #d7f1e7;
+        overflow: hidden; }
+        #exampleModal .modal-dialog.modal-dialog-box .modal-body .property .property-list table {
+          margin: 0; }
+          #exampleModal .modal-dialog.modal-dialog-box .modal-body .property .property-list table tr {
+            height: 70px; }
+            #exampleModal .modal-dialog.modal-dialog-box .modal-body .property .property-list table tr td {
+              font-size: 22px;
+              vertical-align: middle;
+              text-indent: 60px; }
+            #exampleModal .modal-dialog.modal-dialog-box .modal-body .property .property-list table tr .odd {
+              color: #fff;
+              background: #79cfae; }
+              #exampleModal .modal-dialog.modal-dialog-box .modal-body .property .property-list table tr .odd input {
+                color: #fff;
+                background: #79cfae; }
+            #exampleModal .modal-dialog.modal-dialog-box .modal-body .property .property-list table tr .even {
+              position: relative;
+              color: #777; }
+              #exampleModal .modal-dialog.modal-dialog-box .modal-body .property .property-list table tr .even .del-btn {
+                display: inline-block;
+                position: absolute;
+                width: 26px;
+                height: 26px;
+                right: 30px;
+                background: url("../images/manageImg/shanchu.png") no-repeat center center;
+                cursor: pointer; }
+      #exampleModal .modal-dialog.modal-dialog-box .modal-body .property .add-line {
+        font: 22px/74px 'Microsoft Yahei';
+        color: #79b0cf;
+        margin: 0;
+        cursor: pointer; }
+    #exampleModal .modal-dialog.modal-dialog-box .modal-body .thn {
+      margin-top: 7px; }
+      #exampleModal .modal-dialog.modal-dialog-box .modal-body .thn .opa-pic {
+        margin-top: 26px; }
+        #exampleModal .modal-dialog.modal-dialog-box .modal-body .thn .opa-pic .opa {
+          font: 22px/42px 'Microsoft Yahei';
+          box-sizing: border-box;
+          height: 250px;
+          padding: 26px 0 20px 30px;
+          display: inline-block;
+          position: absolute; }
+          #exampleModal .modal-dialog.modal-dialog-box .modal-body .thn .opa-pic .opa .file {
+            position: absolute;
+            width: 40px;
+            z-index: 100;
+            overflow: hidden;
+            opacity: 0;
+            filter: alpha(opacity=0); }
+          #exampleModal .modal-dialog.modal-dialog-box .modal-body .thn .opa-pic .opa .uploading {
+            position: absolute;
+            top: 26px;
+            background: none;
+            color: #79b0cf;
+            cursor: pointer; }
+          #exampleModal .modal-dialog.modal-dialog-box .modal-body .thn .opa-pic .opa .del-pic {
+            position: absolute;
+            z-index: 1000;
+            bottom: 20px;
+            display: block;
+            vertical-align: bottom;
+            width: 44px; }
+      #exampleModal .modal-dialog.modal-dialog-box .modal-body .thn img {
+        width: 280px;
+        height: 250px;
+        border-radius: 8px; }
+        @media (max-width: 1366px) {
+          #exampleModal .modal-dialog.modal-dialog-box .modal-body .thn img {
+            width: 250px;
+            height: 220px; } }
+    #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show {
+      margin-top: 26px; }
+      #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show .pic-list {
+        display: inline-block;
+        margin: 28px 40px 0 0; }
+        #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show .pic-list img {
+          width: 280px;
+          height: 250px;
+          border-radius: 8px; }
+          @media (max-width: 1366px) {
+            #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show .pic-list img {
+              width: 220px;
+              height: 190px; } }
+        #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show .pic-list .opa {
+          font: 22px/72px "Microsoft Yahei";
+          position: relative; }
+          #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show .pic-list .opa span {
+            cursor: pointer; }
+          #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show .pic-list .opa .file {
+            position: absolute;
+            z-index: 100;
+            overflow: hidden;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            width: 40px; }
+          #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show .pic-list .opa .uploading {
+            position: relative;
+            background: none;
+            color: #79b0cf;
+            cursor: pointer; }
+          #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show .pic-list .opa .del-pic {
+            float: right; }
+      #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show .last {
+        width: 280px;
+        height: 250px;
+        position: relative;
+        top: -40px;
+        margin: 0;
+        border: 1px dashed #f3f2f2;
+        border-radius: 8px; }
+        @media (max-width: 1366px) {
+          #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show .last {
+            width: 220px;
+            height: 190px; } }
+        #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show .last img {
+          border: none; }
+        #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show .last .opa {
+          position: absolute;
+          top: 90px;
+          left: 104px; }
+          #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show .last .opa .add-pic {
+            width: 75px;
+            height: 75px;
+            display: block;
+            background: url("../images/manageImg/add.png") no-repeat center center; }
+          #exampleModal .modal-dialog.modal-dialog-box .modal-body .pic-show .last .opa .file {
+            position: absolute;
+            top: 10px; }
+  #exampleModal .modal-dialog.modal-dialog-box .modal-content {
+    border-radius: 20px;
+    padding-bottom: 18px; }
+    #exampleModal .modal-dialog.modal-dialog-box .modal-content .modal-footer {
+      border-top: none; }
+  #exampleModal .modal-dialog.modal-dialog-box .btn-e79cfae {
+    color: #fff;
+    background-color: #79cfae;
+    border-color: #79cfae;
+    border-radius: 16px;
+    min-width: 308px; }
+
+#myModal .close {
+  opacity: 1; }
+
+#myModal .btn-br {
+  border-radius: 16px; }
+
+#myModal .btn-e79cfae {
+  color: #fff;
+  background-color: #79cfae;
+  border-color: #79cfae; }
+
+#classify-dropdown.dropdown .btn, #dialog-classify-dropdown.dropdown .btn {
+  width: 100%;
+  position: relative;
+  height: 30px !important;
+  border-radius: 10px !important;
+  color: #5d5d5d; }
+  #classify-dropdown.dropdown .btn a, #dialog-classify-dropdown.dropdown .btn a {
+    color: #5d5d5d;
+    text-decoration: none; }

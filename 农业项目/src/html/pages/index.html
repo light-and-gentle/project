@@ -1,0 +1,386 @@
+{% extends "layout.html" %}
+{% block head %}
+<link rel="stylesheet" href="assets/scss/jedate.css">
+<link rel="stylesheet" href="css/index.css" />
+{% endblock %}
+
+{% block content %}
+<div class="variety-content">
+    <div class="content-head clearFix">
+        <h2 class="content-title">
+            品种管理
+        </h2>
+        <div class="create-variety" id="create-var" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="新建品种" >
+            新建品种
+        </div>
+    </div>
+    <div class="variety-info">
+        <div class="classify  r-distance">分类</div>
+        <!--下拉菜单-->
+        <div class="fix-width">
+            <div class="dropdown " id="classify-dropdown" style="width: 100%">
+                <button style="width: 100%; position: relative;" class="btn btn-default dropdown-toggle common-border" type="button" id="dropdownMenu1"  aria-haspopup="true" data-toggle="dropdown" aria-expanded="true">
+                    <span class="txt">Dropdown</span>
+                    <img style="position: absolute; right: 5px; top: 45%;"  src="./images/manageImg/xialajiantou.png">
+                </button>
+                <ul style="width: 100%;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a data-value='111'href="javascript:;">Action</a></li>
+                    <li><a href="javascript:;">Another action</a></li>
+                    <li><a href="javascript:;">Something </a></li>
+                    <li><a href="javascript:;">Separated link</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="variety-id common-padding">品种ID</div>
+        <input type="text" class="variety-id-num common-border">
+        <div class="variety-name common-padding">品种名称</div>
+        <input type="text" class="variety-name-inp common-border">
+        <div class="create-time common-padding">创建时间</div>
+        <input type="text" id="start" class=" r-distance common-border">
+        <input type="text" id="end" class=" common-border">
+        <div class="check">查询</div>
+    </div>
+    <div class="sample-list">
+        <table cellspacing="0" cellpadding="0" class="table table-condensed  table-bordered" >
+            <thead class="sample-list-title">
+                <tr>
+                    <td>品种ID</td>
+                    <td>品种名称</td>
+                    <td>缩略图</td>
+                    <td>前端品种列表展示顺序</td>
+                    <td>品种创建时间</td>
+                    <td >操作</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1022</td>
+                    <td>真善美</td>
+                    <td><img src="" alt=""></td>
+                    <td><input type="text"></td>
+                    <td>2016/11/13</td>
+                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
+                </tr>
+                <tr>
+                    <td>1022</td>
+                    <td>真善美</td>
+                    <td><img src="" alt=""></td>
+                    <td><input type="text"></td>
+                    <td>2016/11/13</td>
+                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
+                </tr>
+                <tr>
+                    <td>1022</td>
+                    <td>真善美</td>
+                    <td><img src="" alt=""></td>
+                    <td><input type="text"></td>
+                    <td>2016/11/13</td>
+                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
+                </tr>
+                <tr>
+                    <td>1022</td>
+                    <td>真善美</td>
+                    <td><img src="" alt=""></td>
+                    <td><input type="text"></td>
+                    <td>2016/11/13</td>
+                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
+
+                </tr>
+                <tr>
+                    <td>1022</td>
+                    <td>真善美</td>
+                    <td><img src="" alt=""></td>
+                    <td><input type="text"></td>
+                    <td>2016/11/13</td>
+                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
+
+                </tr>
+                <tr>
+                    <td>1022</td>
+                    <td>真善美</td>
+                    <td><img src="" alt=""></td>
+                    <td><input type="text"></td>
+                    <td>2016/11/13</td>
+                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
+
+                </tr>
+                <tr>
+                    <td>1022</td>
+                    <td>真善美</td>
+                    <td><img src="" alt=""></td>
+                    <td><input type="text"></td>
+                    <td>2016/11/13</td>
+                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
+
+                </tr>
+                <tr>
+                    <td>1022</td>
+                    <td>真善美</td>
+                    <td><img src="" alt=""></td>
+                    <td><input type="text"></td>
+                    <td>2016/11/13</td>
+                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
+
+                </tr>
+                <tr>
+                    <td>1022</td>
+                    <td>真善美</td>
+                    <td><img src="" alt=""></td>
+                    <td><input type="text"></td>
+                    <td>2016/11/13</td>
+                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
+
+                </tr>
+                <tr>
+                    <td>1022</td>
+                    <td>真善美</td>
+                    <td><img src="" alt=""></td>
+                    <td><input type="text"></td>
+                    <td>2016/11/13</td>
+                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="page-btn">
+        <span class="prev">上页</span>
+        <span class="nun-btn nun-active">1</span>
+        <span class="nun-btn">2</span>
+        <span class="nun-btn">3</span>
+        <span class="next">下页</span>
+    </div>
+    <!-- 新建和详情对应的模态框（Modal） -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog modal-dialog-box" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="./images/manageImg/tanchuangguanbi.png" alt="">
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">新建批次</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="species-info">
+                        <div>选择主分类</div>
+                        <!--下拉菜单-->
+                        <div class="fix-width">
+                            <div class="dropdown " id="dialog-classify-dropdown" style="width: 100%">
+                                <button style="width: 100%; position: relative;" class="btn btn-default dropdown-toggle common-border" type="button" id="dropdownMenu1"  aria-haspopup="true" data-toggle="dropdown" aria-expanded="true">
+                                    <span class="txt">Dropdown</span>
+                                    <img style="position: absolute; right: 5px; top: 45%;"  src="./images/manageImg/xialajiantou.png">
+                                </button>
+                                <ul style="width: 100%;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="javascript:;">Action</a></li>
+                                    <li><a href="javascript:;">Another action</a></li>
+                                    <li><a href="javascript:;">Something </a></li>
+                                    <li><a href="javascript:;">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>品种ID</div>
+                        <input type="text" class="common-border  unique-num">
+                        <div>品种名称</div>
+                        <input type="text" class="common-border">
+                        <input type="text">
+                    </div>
+                    <div class="intro">
+                        <h3 class="subhead">品种介绍</h3>
+                        <textarea name="variety-info" id="" ></textarea>
+                    </div>
+                    <div class="property">
+                        <h3 class="subhead">品种属性</h3>
+                        <div class="property-list">
+                            <table cellspacing="0" cellpadding="0" class=" table table-bordered" id="tb">
+                                <tbody>
+                                <tr class="row">
+                                    <td class="col-md-4 odd"><input type="text"></td>
+                                    <td class="col-md-8 even"><input type="text"><span class="del-btn"></span></td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="odd"><input type="text"></td>
+                                    <td class="col-md-8 even"><input type="text"><span class="del-btn"></span></td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="odd"><input type="text"></td>
+                                    <td class="col-md-8 even"><input type="text"><span class="del-btn"></span></td>
+                                    
+                                </tr>
+                                <tr class="row">
+                                    <td class="odd"><input type="text"></td>
+                                    <td class="col-md-8 even"><input type="text"><span class="del-btn"></span></td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="odd"><input type="text"></td>
+                                    <td class="col-md-8 even"><input type="text"><span class="del-btn"></span></td>
+                                </tr >
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="add-line">添加一行<span>+</span></p>
+                    </div>
+                    <div class="thn">
+                        <h3 class="subhead">缩略图片 （最大尺寸：440*330 4:3）</h3>
+                        <form class="opa-pic">
+                            <img src="" alt="">
+                            <p class="opa">
+                                <input type="file" name="fileField" class="file" id="fileField1" size="28" onchange="document.getElementById('textfield').value=this.value" />
+                                <input type="submit" name="submit" class=" uploading" value="上传" />
+                                <span class="del-pic">删除</span>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="pic-show">
+                        <h3 class="subhead">详情展示图片 （最多三张 最大尺寸：1080*810 4:3）</h3>
+                        <form class="pic-list">
+                            <img src="" alt="">
+                            <p class="opa">
+                                <input type="file" name="fileField" class="file" id="fileField2" size="28" onchange="document.getElementById('textfield').value=this.value" />
+                                <input type="submit" name="submit" class=" uploading" value="上传" />
+                                <span class="del-pic">删除</span>
+                            </p>
+                        </form>
+                        <form class="pic-list">
+                            <img src="" alt="">
+                            <p class="opa">
+                                <input type="file" name="fileField" class="file" id="fileField3" size="28" onchange="document.getElementById('textfield').value=this.value" />
+                                <input type="submit" name="submit" class=" uploading" value="上传" />
+                                <span class="del-pic">删除</span>
+                            </p>
+                        </form>
+                        <form class="pic-list">
+                            <img src="" alt="">
+                            <p class="opa">
+                                <input type="file" name="fileField" class="file" id="fileField4" size="28" onchange="document.getElementById('textfield').value=this.value" />
+                                <input type="submit" name="submit" class=" uploading" value="上传" />
+                                <span class="del-pic">删除</span>
+                                <!--<span class="add-pic"></span>-->
+                                <!--<input type="file" name="fileField" class="file" id="fileField" size="28" onchange="document.getElementById('textfield').value=this.value" />-->
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button"   class="btn btn-e79cfae btn-lg center-block">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--input对应的模态框（Modal）-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">
+                        <img src="./images/manageImg/tanchuangguanbi.png" alt="">
+
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                       提示
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    确定更改么？
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-primary btn-e79cfae btn-br" data-dismiss="modal" id="sure">
+                        确定
+                    </button>
+                    <button type="button" class="btn btn-default btn-br" data-dismiss="modal">取消
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+{% endblock %}
+{% block foot %}
+<script src="assets/js/jquery.jedate.min.js"></script>
+<script type="text/javascript">
+    //日期范围限制
+    var start = {
+        skinCell: 'jedategreen',
+        format: 'YYYY-MM-DD ',
+        minDate: $.nowDate(0), //设定最小日期为当前日期
+        //isinitVal:true,
+        maxDate: '2099-06-16 23:59:59', //最大日期
+        choosefun: function(elem,datas){
+            end.minDate = datas; //开始日选好后，重置结束日的最小日期
+        }
+
+    };
+    var end = {
+        skinCell: 'jedategreen',
+        format: 'YYYY-MM-DD ',
+        minDate: $.nowDate(0), //设定最小日期为当前日期
+        //isinitVal:true,
+        maxDate: '2099-06-16 23:59:59', //最大日期
+        choosefun: function(elem,datas){
+            start.maxDate = datas; //将结束日的初始值设定为开始日的最大日期
+        }
+    };
+    $("#start").jeDate(start);
+    $("#end").jeDate(end);
+
+//    input对应的Modal
+    $('.sample-list input').on('blur', showmodal);
+    function showmodal(ev){
+        ev.stopPropagation();
+        $('#myModal').modal({backdrop:"static"});
+        $('#sure').one('click',function () {
+//           处理事件
+
+        })
+    }
+    //   新建及编辑模态框
+    $('#exampleModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var recipient = button.data('whatever');
+
+        var modal = $(this);
+        if(recipient != '新建评价批次'){
+
+        }else {
+
+        }
+        modal.find('.modal-title').text(recipient)
+    });
+//    模态框内添加一行
+    var tbody = $('#tb').children();
+    $('.add-line').click(function () {
+        tbody.append('<tr class="row">\
+            <td class="odd"><input type="text"></td>\
+            <td class="col-md-8 even"><input type="text"><span class="del-btn"></span></td>\
+            </tr>');
+        $('.del-btn').on('click',removetr);
+    });
+    $('.del-btn').on('click',removetr);
+    function removetr(){
+        if(tbody.children().length > 1){
+            $(this).parents('tr').remove()
+        }
+    }
+//    下拉菜单
+    $('#classify-dropdown').on('click', function () {
+        var _seft = $(this);
+
+        var obutton = _seft.find('button').find('.txt');
+        _seft.find('li').on('click', function(ev){
+            obutton.html($(this).html());
+            console.log(_seft.find('a').data('value'))
+        })
+    })
+    $('#dialog-classify-dropdown').on('click', function () {
+        var _seft = $(this);
+        var obutton = _seft.find('button').find('.txt');
+        _seft.find('li').on('click', function(ev){
+            obutton.html($(this).html());
+        })
+    })
+
+</script>
+{% endblock %}
