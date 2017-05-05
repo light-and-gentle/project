@@ -1,0 +1,239 @@
+{% extends "layout.html" %}
+{% block head %}
+<!--时间控件-->
+<link rel="stylesheet" href="assets/scss/jedate.css">
+<!-- custom scrollbar stylesheet -->
+<link rel="stylesheet" href="assets/scss/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="css/public.css" />
+<link rel="stylesheet" href="css/environmental.css" />
+{% endblock %}
+{% block content %}
+<div class="content-head clearfix">
+    <h2 class="content-title">
+        空气温度
+    </h2>
+</div>
+<div class="info-content parameter-info">
+    <form class="form-inline" action="/" method="post">
+        <div class="form-group">
+            <label for="inputPassword" class="control-label">站点大棚</label>
+            <div class="dropdown " id="site-greenhouse">
+                    <button style="width: 100%; position: relative;" class="btn btn-default dropdown-toggle form-control" type="button" id="dropdownMenu1"  aria-haspopup="true" data-toggle="dropdown" aria-expanded="true">
+                        <span class="txt">1号大棚（默认）</span>
+                        <img style="position: absolute; right: 5px; top: 45%;"  src="./images/manageImg/xialajiantou.png">
+                    </button>
+                    <ul style="width: 100%;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something </a></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword1" class="  control-label">选择传感器</label>
+            <div class="dropdown" id="sensor">
+                    <button style="width: 100%; position: relative;" class="btn btn-default dropdown-toggle form-control" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <span class="txt">TWTN1（默认）</span>
+                        <img style="position: absolute; right: 5px; top: 45%;" src="./images/manageImg/xialajiantou.png">
+                    </button>
+                    <ul style="width: 100%;" class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something  </a></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="form-group">
+            <input class="magic-radio" type="radio" name="soil-humidity" id="live-charts" value="option4" >
+            <label for="live-charts" class="radio-label">实时图表(展示前24小时)</label>
+        </div>
+        <div class="form-group">
+            <input class="magic-radio" type="radio" name="soil-humidity" id="history-chart" value="option4" >
+            <label for="history-chart" class="radio-label">历史图表</label>
+        </div>
+        <div class="form-group">
+            <label for="start" class=" control-label">开始日期</label>
+            <input type="text" class=" form-control" id="start" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="end" class=" control-label">结束日期</label>
+            <input type="text" class="form-control" id="end" placeholder="">
+        </div>
+        <button type="submit" class="btn-e79cfae btn-lg center-block top-distance">显示图表</button>
+    </form>
+
+</div>
+<div class="info-content chart-info">
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="sampling" class=" control-label">采样间隔</label>
+            <div class="dropdown " id="sampling">
+                <button style="width: 100%; position: relative;" class="btn btn-default dropdown-toggle form-control" type="button" id="dropdownMenu1"  aria-haspopup="true" data-toggle="dropdown" aria-expanded="true">
+                    <span class="txt">60分钟</span>
+                    <img style="position: absolute; right: 5px; top: 45%;"  src="./images/manageImg/xialajiantou.png">
+                </button>
+                <ul style="width: 100%;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="javascript:;">Action</a></li>
+                    <li><a href="javascript:;">Another action</a></li>
+                    <li><a href="javascript:;">Something </a></li>
+                    <li><a href="javascript:;">Separated link</a></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+    <!-- 显示Echarts图表 -->
+    <div id="chart-container"></div>
+    <button type="button" class="btn-e79cfae btn-lg center-block" data-toggle="modal" data-target="#preview-report" data-backdrop="static">导出报表</button>
+</div>
+
+<!--导出报表对应的报表预览-->
+<div class="modal fade" id="preview-report" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog modal-dialog-box" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="./images/manageImg/tanchuangguanbi.png" alt="">
+                </button>
+                <h4 class="modal-title" id="exampleModalLabel">报表预览</h4>
+            </div>
+            <div class="modal-body">
+                <div class="report-table" id="report">
+                    <table cellspacing="0" cellpadding="0" class="table table-condensed  table-bordered" >
+                        <thead>
+                        <tr>
+                            <td>日期</td>
+                            <td>2点</td>
+                            <td>8点</td>
+                            <td>14点</td>
+                            <td>20点</td>
+                            <td>平均温度</td>
+                            <td>最高温度</td>
+                            <td>最低温度</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2017/2/1</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>15°</td>
+                            <td>28°</td>
+                            <td>5°</td>
+                        </tr>
+                        <tr>
+                            <td>2017/2/1</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>15°</td>
+                            <td>28°</td>
+                            <td>5°</td>
+                        </tr>
+                        <tr>
+                            <td>2017/2/1</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>15°</td>
+                            <td>28°</td>
+                            <td>5°</td>
+                        </tr>
+                        <tr>
+                            <td>2017/2/1</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>15°</td>
+                            <td>28°</td>
+                            <td>5°</td>
+                        </tr>
+                        <tr>
+                            <td>2017/2/1</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>15°</td>
+                            <td>28°</td>
+                            <td>5°</td>
+                        </tr>
+                        <tr>
+                            <td>2017/2/1</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>15°</td>
+                            <td>28°</td>
+                            <td>5°</td>
+                        </tr>
+                        <tr>
+                            <td>2017/2/1</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>15°</td>
+                            <td>28°</td>
+                            <td>5°</td>
+                        </tr>
+                        <tr>
+                            <td>2017/2/1</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>15°</td>
+                            <td>28°</td>
+                            <td>5°</td>
+                        </tr>
+                        <tr>
+                            <td>2017/2/1</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>15°</td>
+                            <td>28°</td>
+                            <td>5°</td>
+                        </tr>
+                        <tr>
+                            <td>2017/2/1</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>6°</td>
+                            <td>15°</td>
+                            <td>28°</td>
+                            <td>5°</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-e79cfae btn-lg center-block">导出Excel</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block foot %}S
+<!--时间控件-->
+<script src="assets/js/jquery.jedate.min.js"></script>
+<!-- custom scrollbar plugin -->
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!--echarts-->
+<script src="assets/js/echarts.common.min.js"></script>
+<script type="text/javascript" src="js/environmental.js"></script>
+{% endblock %}

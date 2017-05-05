@@ -1,26 +1,109 @@
 {% extends "layout.html" %}
 {% block head %}
+<!-- custom scrollbar stylesheet -->
+<link rel="stylesheet" href="assets/scss/jquery.mCustomScrollbar.css">
 <link rel="stylesheet" href="css/public.css" />
 <link rel="stylesheet" href="css/setting.hardware.context.css" />
 {% endblock %}
 
 {% block content %}
-<div class="content-head">
+<div class="content-head clearfix">
     <h2 class="content-title">
         硬件关联配置
     </h2>
 </div>
-<div class="setting-content">
-    <div class="tree-menu-content">
-
+<div class="setting-content clearfix">
+    <div class="tree-menu-content common-content">
+        {% include "partials/tree.menu.html" %}
     </div>
-    <div class="hardware-content"></div>
+    <div class="hardware-content common-content">
+        <div class="menu-title">添加绑定硬件</div>
+        <div class="device-content">
+            <div>
+                <input class="magic-checkbox" type="checkbox" name="layout" id="c001">
+                <label for="c001">LLKDADF111</label>
+            </div>
+            <div>
+                <input class="magic-checkbox" type="checkbox" name="layout" id="c001">
+                <label for="c001">LLKDADF111</label>
+            </div>
+            <div>
+                <input class="magic-checkbox" type="checkbox" name="layout" id="c001">
+                <label for="c001">LLKDADF111</label>
+            </div>
+            <div>
+                <input class="magic-checkbox" type="checkbox" name="layout" id="c001">
+                <label for="c001">LLKDADF111</label>
+            </div>
+            <div>
+                <input class="magic-checkbox" type="checkbox" name="layout" id="c001">
+                <label for="c001">LLKDADF111</label>
+            </div>
+        </div>
+        <button class="confirm-btn center-block">确定</button>
+    </div>
 </div>
 
 {% endblock %}
 
 
 {% block foot %}
+<!-- custom scrollbar plugin -->
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+    //树形菜单
+   $('.tree-menu li:has(ul)').addClass('parent_li');
+    /*  $('.tree-menu li.parent_li > .menu-item-title').on('click', function (e) {
+        var children = $(this).parent('li.parent_li').find(' > ul');
+        if (children.hasClass('fold')) {
+            children.removeClass('fold');
+            $(this).find('.tree-menu-icon').addClass('unfold');
+        } else {
+            children.addClass('fold');
+            $(this).find('.tree-menu-icon').removeClass('unfold');
+        }
+        e.stopPropagation();
+    });*/
+    $('.menu-title > span').on('click', function (e) {
+        console.log(this)
+        var children = $(this).parents('li.parent_li').find('.nav-second');
+        console.log(children);
+        if (children.hasClass('fold')) {
+            children.removeClass('fold');
+            $(this).find('.tree-menu-icon').addClass('unfold');
+        } else {
+            children.addClass('fold');
+            $(this).find('.tree-menu-icon').removeClass('unfold');
+        }
+        e.stopPropagation();
+    });
+    //打开传感器菜单
+    $('.menu-item-title-sensor  > span').on('click', function (e) {
+        var children = $(this).parents('li.parent_li').find('.nav-three');
+        if (children.hasClass('fold')) {
+            children.removeClass('fold');
+            $(this).find('.tree-menu-icon').addClass('unfold');
+        } else {
+            children.addClass('fold');
+            $(this).find('.tree-menu-icon').removeClass('unfold');
+        }
+        e.stopPropagation();
+    });
+    $('third-menu').find('span').on('click', function () {
+        
+    })
+    //    删除设备
+    $('.tree-menu ').on('click','.del-device', function () {
+        $(this).parents('.row').remove();
+    });
 
 
+    //  scrollbar
+    $(".tree-menu-content").mCustomScrollbar({
+        theme:"minimal"
+    });
+    $(".device-content").mCustomScrollbar({
+        theme:"minimal"
+    });
+</script>
 {% endblock %}

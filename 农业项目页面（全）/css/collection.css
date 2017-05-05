@@ -1,0 +1,406 @@
+@charset "UTF-8";
+.item-info {
+  padding: 14px 10px 10px 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px #cdcdce, 0 -5px 5px #cdcdce, 5px 0 5px #cdcdce, -5px 0 5px #cdcdce; }
+  .item-info .category {
+    display: inline-block;
+    vertical-align: middle; }
+
+.common-border {
+  width: 120px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #777;
+  border-radius: 12px;
+  margin: 5px 15px;
+  padding-left: 13px; }
+
+.form-inline .form-group label {
+  font-weight: normal;
+  color: #333; }
+.form-inline .form-group .form-control{
+  width: 120px !important;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #777;
+  border-radius: 12px;
+  margin: 5px 15px;
+  padding: 0 !important;
+}
+  .form-inline .form-group .form-control .dropdown-menu {
+    min-width: 120px; }
+
+
+.dropdown-menu a, .txt a {
+  color: #3a3b3b;
+  text-decoration: none; }
+
+#collect-lable-dropdown.dropdown .btn,
+#collect-indicator.dropdown .btn,
+#collect-state.dropdown .btn {
+  width: 100%;
+  position: relative;
+  height: 28px !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding-left: 13px;
+  text-align: left; }
+
+.status-btn {
+  color: #FC6B6B; }
+
+.detail, .efficient {
+  color: #79B0CF; }
+
+.efficient.ineffective {
+  color: #B6B5B5; }
+
+.del {
+  color: #79CFAE; }
+  .del[disabled] {
+    color: #B6B5B5; }
+
+.btn-check {
+  display: inline-block;
+  float: right;
+  width: 116px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  background: #79cfae;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px #d7f1e7, 0 -5px 5px #d7f1e7, 5px 0 5px #d7f1e7, -5px 0 5px #d7f1e7; }
+  .btn-check:hover {
+    color: #fff; }
+
+.opt {
+  display: inline-block;
+  margin-left: 36px;
+  vertical-align: middle; }
+  @media (max-width: 1366px) {
+    .opt {
+      margin-left: 20px; } }
+
+.list-common-border {
+  width: 102px;
+  height: 24px;
+  border: 1px solid #777;
+  font-size: 16px;
+  border-radius: 12px;
+  text-align: center; }
+
+.modal-dialog.modal-dialog-box {
+  width: 520.8px; }
+
+.modal-dialog.modal-dialog-box .modal-header {
+  padding: 20px 40px;
+  border-bottom: none; }
+
+.modal-dialog.modal-dialog-box .modal-title {
+  font-size: 20px;
+  line-height: 50px;
+  color: #1c1d1d; }
+
+.modal-dialog.modal-dialog-box .modal-body {
+  padding: 0 60px; }
+  .modal-dialog.modal-dialog-box .modal-body label {
+    font-weight: normal;
+    color: #1C1D1D; }
+
+.modal-dialog.modal-dialog-box .modal-content {
+  border-radius: 20px;
+  padding-bottom: 18px; }
+
+.modal-dialog.modal-dialog-box .close {
+  opacity: 1; }
+
+.modal-dialog.modal-dialog-box .modal-body .form-group {
+  margin-bottom: 20px; }
+
+.dis {
+  background-color: #f3f2f2; }
+
+.modal-dialog.modal-dialog-box .modal-body .form-control {
+  height: 30px;
+  border: 1px solid #777;
+  border-radius: 10px; }
+
+.modal-dialog.modal-dialog-box .modal-content .modal-footer {
+  border-top: none; }
+
+.btn-e79cfae {
+  font-size: 16px;
+  color: #fff;
+  background-color: #79cfae;
+  border-color: #79cfae;
+  border-radius: 16px;
+  min-width: 215.6px; }
+
+.btn-e79cfae:hover {
+  color: #fff; }
+
+.modal-dialog.modal-dialog-box .modal-body .form-horizontal .control-label {
+  white-space: nowrap;
+  padding-top: 0 !important; }
+
+#collect-dialog-classify.dropdown .btn {
+  width: 100%;
+  position: relative;
+  height: 30px !important;
+  border: 1px solid #777;
+  border-radius: 10px !important;
+  padding-left: 13px;
+  text-align: left; }
+
+#collect-modal .fruit-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  border: 1px solid #777;
+  border-radius: 5px; }
+
+#collect-modal .check-fruit-icon {
+  border: none;
+  background: url("../images/manageImg/guoshixuanzhong.png") no-repeat center center; }
+
+#collect-modal .like-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  background: url("../images/manageImg/xihao.png") no-repeat center center; }
+
+#collect-modal .check-like-icon {
+  background: url("../images/manageImg/xinxuanzhong.png") no-repeat center center; }
+
+#collect-modal .del-option {
+  font-size: 16px;
+  background: none;
+  color: #FC6B6B; }
+
+#collect-modal .add-option {
+  background: none;
+  color: #79B0CF; }
+
+#collect-modal .quantile-box {
+  display: none;
+   }
+
+#modal-sm .modal-dialog-box {
+  width: 662px; }
+
+#modal-sm .btn {
+  height: 30px;
+  border-radius: 10px;
+  padding: 0 20px; }
+  #modal-sm .btn:first-child {
+    color: #fff;
+    background-color: #79cfae;
+    border-color: #79cfae;
+    margin-right: 10px; }
+
+#modal-sm .modal-footer {
+  border-top: none; }
+
+
+#myModal .close {
+  opacity: 1; }
+
+#myModal .modal-header {
+  border-bottom: none; }
+
+#myModal .modal-body {
+  text-align: center; }
+
+#myModal .modal-footer {
+  text-align: center;
+  border-top: none; }
+
+#myModal .btn-br {
+  border-radius: 10px;
+  height: 30px;
+  padding: 0 20px;
+  margin: 0 20px; }
+#myModal .btn-size{
+	min-width: 0;
+}
+
+
+/* 关注度喜好 */
+.set-distance{
+  margin: 20px 0 10px;
+}
+#start.form-control,
+#end.form-control{
+  padding-left: 13px!important;
+}
+.label-right{
+  border-radius: 12px;border: 1px solid #777;
+}
+.label-right label{
+  margin: 0 10px;
+}
+/*多批评价*/
+.set-h2-font{
+  font: bold 20px/1 '宋体';
+  margin: 0;
+}
+
+
+/*评价信息管理-单批次评价-单一指标评价*/
+.modal-dialog.modal-dialog-box .modal-body .set-margin-bottom{
+  margin-bottom: 0;
+}
+#single-batch-dropdown.dropdown .btn,#single-index-dropdown.dropdown .btn{
+  border: 1px solid #777;
+  border-radius: 12px;
+  padding-right:20px;
+  min-width:130px;
+  text-align: left;
+  margin-bottom:5px;
+}
+.set-margin-bottom10{
+  margin-bottom: 10px;
+}
+
+/*评价展示设置*/
+.modal-dialog.modal-dialog-box .modal-body .form-horizontal .set-control-label{
+  padding-top: 7px!important;
+}
+textarea{ resize:none;}
+.set-margin-left{
+  margin-left:10px;
+}
+/*过往报告*/
+#start,#end{
+  padding-left: 13px!important;
+}
+
+/*监控录像*/
+.img-preview{
+  position: relative;
+}
+.img-preview video{
+  width: 100%;
+  height: 230px;
+}
+.img-preview >div{
+  position: relative;
+  z-index: 100;
+  height: 230px;
+  margin-top: -234px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 1em;
+  background-color: rgba(0,0,0,.3);
+  overflow: hidden;
+}
+.img-preview >div >img{
+  width: 35px;
+  margin-top: 56px;
+}
+.img-preview >div p:first-of-type{
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+  line-height: 30px;
+  margin: 0;
+}
+.img-preview >div p:last-of-type{
+  font-size: 13px;
+  color: #fff;
+  width: 100%;
+  line-height: 24px;
+  margin: 0; }
+#surveillance-video .close{
+  opacity: 1;
+}
+.video-content{
+  height: 400px;
+  position:relative;
+  /*padding-bottom:56.25%;    !*需要用padding来维持16:9比例,也就是9除以16*!*/
+  /*height: 0;*/
+  /*position: relative;*/
+  left: 0;
+  top: 0;
+
+}
+.video-content video{
+  object-fit:fill;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width:100%;
+}
+.control-bar{
+  width: 100%;
+  height:90px;
+  position: absolute;
+  left:0;
+  bottom: 0;
+  padding: 0 32px;
+  background: rgba(0,0,0,.5);
+}
+.btn-Play{
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin:25px 32px 0 0;
+  background: url("../images/icon/bofanghui.png");
+  background-size: cover;
+}
+.btn-pause{
+  background: url("../images/icon/zanting.png");
+  background-size: cover;
+}
+.capture{
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-top: 25px;
+  background: url("../images/icon/jieping.png");
+  background-size: cover;
+}
+.muted{
+  float: right;
+  width: 44px;
+  height: 40px;
+  margin:25px 0 0 32px ;
+  background: url("../images/icon/shengyin.png");
+  background-size: cover;
+}
+.muted-kai{
+  background: url("../images/icon/jingyin.png");
+  background-size: cover;
+}
+.video-scaling{
+  float: right;
+  width: 42px;
+  height: 40px;
+}
+.video-scaling span{
+ display: block;
+}
+.arrow-up {
+  width: 0;
+  height: 0;
+  margin-bottom: 10px;
+  border:20px solid transparent;
+  border-bottom: 20px solid #dbdbdb;
+
+}
+.arrow-down {
+  width: 0;
+  height: 0;
+  border:20px solid transparent;
+  border-top: 20px solid #dbdbdb;
+}
+
+
+

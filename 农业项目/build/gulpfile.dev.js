@@ -102,7 +102,7 @@ function dev() {
         browserSync.init({
             server: {
                 baseDir: Config.dist,
-                index:'setting.hardware.context.html'//指定运行的文件，不设置默认index
+                index:'environmental.air.temp.html'//指定运行的文件，不设置默认index
             },
             browser: "Chrome" ,//默认打开浏览器
             notify: false

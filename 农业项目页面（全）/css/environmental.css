@@ -1,0 +1,115 @@
+.info-content {
+  width: 100%;
+  padding: 14px 10px 10px 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px #cdcdce, 0 -5px 5px #cdcdce, 5px 0 5px #cdcdce, -5px 0 5px #cdcdce; }
+
+.parameter-info .radio-label {
+  margin: 0 15px 0 0; }
+
+.chart-info {
+  margin-top: 20px; }
+  .chart-info #chart-container {
+    width: 100%;
+    height: 280px; }
+
+.form-group .control-label {
+  font-weight: normal;
+  color: #333;
+  text-align: left;
+  margin-bottom: 0; }
+
+.form-group .dropdown {
+  display: inline-block; }
+
+.form-control {
+  width: 130px !important;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #777;
+  border-radius: 12px;
+  margin: 5px 15px;
+  padding-left: 13px; }
+  .form-control .dropdown-menu {
+    min-width: 120px; }
+
+.dropdown-menu a, .txt a {
+  color: #3a3b3b;
+  text-decoration: none; }
+
+#site-greenhouse.dropdown .btn,
+#sensor.dropdown .btn,
+#sampling.dropdown .btn {
+  border: 1px solid #777;
+  padding-left: 13px;
+  text-align: left; }
+  #site-greenhouse{
+   margin: 5px 15px;
+  }
+#site-greenhouse.dropdown .btn{
+	border: 1px solid #777;
+  border-radius: 12px;
+  padding-right:20px;
+}
+.top-distance {
+  margin-top: 10px; }
+
+.btn-e79cfae {
+  font-size: 16px;
+  color: #fff;
+  background-color: #79cfae;
+  border-color: #79cfae;
+  border-radius: 16px;
+  min-width: 215.6px; }
+
+.modal-dialog.modal-dialog-box {
+  width: 800px; }
+  .modal-dialog.modal-dialog-box .modal-header {
+    padding: 20px 30px;
+    border-bottom: none; }
+  .modal-dialog.modal-dialog-box .close {
+    opacity: 1; }
+  .modal-dialog.modal-dialog-box .modal-title {
+    font-size: 20px;
+    line-height: 50px;
+    color: #1c1d1d; }
+  .modal-dialog.modal-dialog-box .modal-body {
+    padding: 0 30px; }
+    .modal-dialog.modal-dialog-box .modal-body .report-table {
+      position: relative;
+      overflow: hidden;
+      height: 340px;
+      box-shadow: 5px 0 5px #e4e4e5, -5px 0 5px #e4e4e5, 0 -5px 5px #c9e3da, 0 5px 5px #e4e4e5;
+      border-radius: 8px; }
+      .modal-dialog.modal-dialog-box .modal-body .report-table label {
+        line-height: 30px; }
+      .modal-dialog.modal-dialog-box .modal-body .report-table table {
+        margin: 0; }
+      .modal-dialog.modal-dialog-box .modal-body .report-table thead {
+        background: #79cfae; }
+        .modal-dialog.modal-dialog-box .modal-body .report-table thead td {
+          height: 30px;
+          line-height: 30px;
+          padding: 0;
+          color: #fff;
+          text-align: center; }
+      .modal-dialog.modal-dialog-box .modal-body .report-table tbody tr {
+        height: 30px;
+        text-align: center; }
+        .modal-dialog.modal-dialog-box .modal-body .report-table tbody tr td {
+          color: #333;
+          font-size: 14px;
+          line-height: 30px;
+          padding: 0; }
+  .modal-dialog.modal-dialog-box .modal-content {
+    border-radius: 20px;
+    padding-bottom: 18px; }
+    .modal-dialog.modal-dialog-box .modal-content .modal-footer {
+      border-top: none; }
+
+.reduce-margin {
+  margin: 5px; }
+
+.reduce-width {
+  width: 100px !important; }

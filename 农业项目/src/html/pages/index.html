@@ -1,16 +1,16 @@
 {% extends "layout.html" %}
 {% block head %}
 <link rel="stylesheet" href="assets/scss/jedate.css">
+<link rel="stylesheet" href="css/public.css" />
 <link rel="stylesheet" href="css/index.css" />
 {% endblock %}
 
 {% block content %}
-<div class="variety-content">
-    <div class="content-head clearFix">
+    <div class="content-head clearfix">
         <h2 class="content-title">
             品种管理
         </h2>
-        <div class="create-variety" id="create-var" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="新建品种" >
+        <div class="create-item" id="create-var" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="新建品种" >
             新建品种
         </div>
     </div>
@@ -31,8 +31,6 @@
                 </ul>
             </div>
         </div>
-
-
         <div class="variety-id common-padding">品种ID</div>
         <input type="text" class="variety-id-num common-border">
         <div class="variety-name common-padding">品种名称</div>
@@ -78,51 +76,6 @@
                     <td><input type="text"></td>
                     <td>2016/11/13</td>
                     <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
-                </tr>
-                <tr>
-                    <td>1022</td>
-                    <td>真善美</td>
-                    <td><img src="" alt=""></td>
-                    <td><input type="text"></td>
-                    <td>2016/11/13</td>
-                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
-
-                </tr>
-                <tr>
-                    <td>1022</td>
-                    <td>真善美</td>
-                    <td><img src="" alt=""></td>
-                    <td><input type="text"></td>
-                    <td>2016/11/13</td>
-                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
-
-                </tr>
-                <tr>
-                    <td>1022</td>
-                    <td>真善美</td>
-                    <td><img src="" alt=""></td>
-                    <td><input type="text"></td>
-                    <td>2016/11/13</td>
-                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
-
-                </tr>
-                <tr>
-                    <td>1022</td>
-                    <td>真善美</td>
-                    <td><img src="" alt=""></td>
-                    <td><input type="text"></td>
-                    <td>2016/11/13</td>
-                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
-
-                </tr>
-                <tr>
-                    <td>1022</td>
-                    <td>真善美</td>
-                    <td><img src="" alt=""></td>
-                    <td><input type="text"></td>
-                    <td>2016/11/13</td>
-                    <td class="last-child" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-whatever="品种详情">编辑</td>
-
                 </tr>
                 <tr>
                     <td>1022</td>
@@ -287,7 +240,7 @@
                 </div>
                 <div class="modal-footer">
 
-                    <button type="button" class="btn btn-primary btn-e79cfae btn-br" data-dismiss="modal" id="sure">
+                    <button type="button" class="btn  btn-e79cfae btn-br"  id="sure">
                         确定
                     </button>
                     <button type="button" class="btn btn-default btn-br" data-dismiss="modal">取消
@@ -296,7 +249,9 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal -->
     </div>
-</div>
+<!--小提示-->
+<p class="tip">修改成功</p>
+
 {% endblock %}
 {% block foot %}
 <script src="assets/js/jquery.jedate.min.js"></script>
@@ -333,6 +288,7 @@
         $('#myModal').modal({backdrop:"static"});
         $('#sure').one('click',function () {
 //           处理事件
+            tips('ok','kkkk')
 
         })
     }
@@ -373,7 +329,7 @@
             obutton.html($(this).html());
             console.log(_seft.find('a').data('value'))
         })
-    })
+    });
     $('#dialog-classify-dropdown').on('click', function () {
         var _seft = $(this);
         var obutton = _seft.find('button').find('.txt');
@@ -381,6 +337,27 @@
             obutton.html($(this).html());
         })
     })
+//弹框位置
+    $('#myModal').on('shown.bs.modal', function (e) {
+        $(this).modal({backdrop: 'static', keyboard: false});
+        $(this).css('display', 'block');
+        var modalHeight=$(window).height() / 2 - $('#myModal .modal-dialog').height() / 2;
+        $(this).find('.modal-dialog').css({
+            'margin-top': modalHeight
+        });
+    });
+//    tips
+    function tips(classNames,message){
+        var timer = null;
+        $('.tips').css({'transition':'none','top':'-50px'}).text(message);
+        setTimeout(function () {
+            $('.tips').addClass(classNames).css({'transition':'.3s','top':'0'});
+        },0);
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            $('.tips').css({'top':'-50px'}).removeClass(classNames);
+        },2000);
+    }
 
 </script>
 {% endblock %}

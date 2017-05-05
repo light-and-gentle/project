@@ -1,233 +1,149 @@
 @import "common/index";
-.clearFix:after{
-  content: "" ;
-  display: block ;
-  height: 0 ;
-  clear: both ;
-  visibility: hidden ;
-}
-.clearFix{
-  zoom: 1;
-}
-body{
-  background: #ececed;
-}
-.variety-content{
-  .content-head{
-    height: 98px;
-    .content-title{
-      float: left;
-      margin: 0;
-      padding-top: 4px;
-      font: bold 26px/96px '宋体';
-      vertical-align: middle;
-    }
-    .create-variety{
-      float: right;
-      margin: 33px 50px 0 0;
-      padding: 0 23px 0 29px;
-      font: 20px/34px '宋体';
-      color: #fff;
-      background: #fc6b6b;
-      @include br();
-      @include bs(#f1c5c6);
-      cursor: pointer;
-    }
+
+.variety-info{
+  padding: 14px 10px 10px 10px;
+  background: #fff;
+  @include br();
+  @include bs();
+  div{
+    vertical-align: middle;
+    display: inline-block;
   }
-  .variety-info{
+  .common-border{
+    width:112px;
+    height: 30px;
     box-sizing: border-box;
-    height: 120px;
-    //待完善
-    font-size: 0;
-    //line-height:120px;
-    @include br();
-    background: #fff;
-    box-shadow: 5px 0  5px #e4e4e5, -5px 0  5px #e4e4e5, 0 -5px 5px #e4e4e5,0 5px 5px #e4e4e5;
-    padding:42px 3.13%;
-    div{
-      vertical-align: middle;
-      font-size: 16px;
-      display: inline-block;
-    }
-    .common-border{
-      width:125px;
-      height: 30px;
-      box-sizing: border-box;
-      border: 1px solid #777;
-      font-size: 16px;
-      @include br(12px);
-      padding-left: 13px;
-      @media (max-width: 1366px) {
-        width: 100px;
-        font-size: 12px;
-      }
-    }
-    .r-distance{
-      margin-right: 36px;
-      @media (max-width: 1366px) {
-        margin-right: 15px;
-      }
-    }
-    .common-padding{
-      margin: 0 58px 0 36px;
-      @media (max-width: 1366px) {
-        margin: 0 20px 0 10px;
-      }
-    }
-    //下拉菜单
-    .fix-width{
-      width:125px;
-      height: 30px;
-      box-sizing: border-box;
-      @media (max-width: 1366px) {
-        width: 100px;
-      }
-    }
-    .check{
-      float: right;
-      width:8.21%;
-      height: 34px;
-      font: 20px/34px 'Microsoft Yahei';
-      text-align: center;
-      color: #fff;
-      @include br();
-      background: #79cfae;
-      box-shadow:5px 0  5px #d7f1e7, -5px 0  5px #d7f1e7, 0 -5px 5px #d7f1e7,0 5px 5px #d7f1e7; ;
-      cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #777;
+    @include br(12px);
+    padding-left: 13px;
+    margin: 5px 0;
+  }
+  .r-distance{
+    margin-right: 10px;
+  }
+  .common-padding{
+    margin:0 10px;
+
+  }
+  //下拉菜单
+  .fix-width{
+    width:112px;
+    box-sizing: border-box;
+    .dropdown-menu{
+      min-width: 112px;
     }
   }
-  .sample-list{
+  .check{
+    float: right;
+    width:110px;
+    height: 30px;
+    margin: 5px 0;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
     @include br();
-    overflow: hidden;
-    margin-top: 40px;
-    box-shadow: 5px 0  5px #e4e4e5, -5px 0  5px #e4e4e5, 0 -5px 5px #c9e3da,0 5px 5px #e4e4e5;
-    background: #fff;
-    table{
+    background: #79cfae;
+    box-shadow:5px 0  5px #d7f1e7, -5px 0  5px #d7f1e7, 0 -5px 5px #d7f1e7,0 5px 5px #d7f1e7; ;
+    cursor: pointer;
+  }
+}
+.sample-list{
+  @include br();
+  overflow: hidden;
+  @include mt();
+  box-shadow: 5px 0  5px #e4e4e5, -5px 0  5px #e4e4e5, 0 -5px 5px #c9e3da,0 5px 5px #e4e4e5;
+  background: #fff;
+  table{
+    text-align: center;
+    margin-bottom:0;
+  }
+  .sample-list-title{
+    background: #79cfae;
+    td{
+      height:40px;
+      font-size: 16px;
+      line-height:40px;
+      color: #fff;
       text-align: center;
-      margin-bottom:0;
+      padding: 0!important;
     }
-    .sample-list-title{
-      background: #79cfae;
-      letter-spacing:8px;
+  }
+  tbody{
+    tr{
+      height:66px;
       td{
-        height: 70px;
-        font:  22px/70px "Microsoft Yahei";
-        color: #fff;
+        font-size: 16px;
+        color: #333;
+        vertical-align: middle;
+        padding: 0!important;
+      }
+      img{
+        width: 90px;
+        height: 60px;
+        @include br(16px);
+        background: #eee;
+        cursor: default;
+      }
+      input{
+        width: 102px;
+        height: 30px;
+        border: 1px solid #777;
+        @include br(12px);
+        font-size: 18px;
         text-align: center;
       }
-    }
-    tbody{
-      tr{
-        height: 120px;
-        td{
-          font-size: 26px;
-          color: #333;
-          vertical-align: middle;
-        }
-        img{
-          width: 120px;
-          height: 80px;
-          @include br(16px);
-          background: #eee;
-          cursor: default;
-        }
-        input{
-          width: 102px;
-          height: 30px;
-          border: 1px solid #777;
-          @include br(12px);
-          font-size: 18px;
-          text-align: center;
-        }
 
-        .last-child{
-          color: #79b0cf;
-          cursor: pointer;
-        }
+      .last-child{
+        color: #79b0cf;
+        cursor: pointer;
       }
     }
   }
-  .page-btn{
-    text-align: center;
-    margin-top: 123px ;
-    span{
-     display: inline-block;
-      margin:0 5px;
-      font: 22px/44px 'Microsoft Yahei';
-      box-shadow: 0 5px 5px #cdcdcd;
-    }
-    .nun-btn{
-      width: 44px;
-      height: 44px;
-      @include br(50%);
-      background: #fff;
-      color: #777;
-      text-align: center;
-      cursor: pointer;
-    }
-    .nun-active{
-      background: #79cfae;
-      box-shadow: 0 5px 5px #dbe6e3;
-      color: #fff;
-    }
-    .prev,.next{
-      padding: 0 24px 0 20px;
-      @include br(16px);
-      background: #fff;
-      cursor: pointer;
-    }
-  }
 }
+
+
 //新建及编辑模态框样式
 #exampleModal{
   .modal-dialog.modal-dialog-box{
-    width: 1280px;
-    @media(max-width: 1366px){
-      width: 900px;
-    }
+    width:800px;
     .modal-header{
-      padding: 45px 58px;
+      padding: 20px 30px;
       border-bottom:none;
-      margin-bottom: 15px;
     }
     .close{ opacity: 1; }
-    .modal-title{ font-size: 28px;
+    .modal-title{
+      font-size: 20px;
+      line-height:50px;
       color: #1c1d1d;
     }
     .modal-body{
-      padding: 0 50px;
+      padding: 0 40px;
       //主体内容部分
       .species-info{
-        height: 84px;
         font-size: 0;
-        //line-height:84px;
         div{
           display: inline-block;
-          font-size: 22px;
+          font-size: 16px;
           vertical-align: middle;
         }
         .common-border {
-          width: 125px;
+          width: 120px;
           height: 30px;
-          margin: 0 58px 0 36px;
+          margin: 0 20px 0 10px;
           box-sizing: border-box;
           border: 1px solid #777;
-          font-size: 18px;
+          font-size: 16px;
           vertical-align: middle;
           @include br(12px);
           padding-left: 13px;
-          @media (max-width: 1366px) {
-            width: 120px;
-            margin: 0 35px 0 20px;
-          }
         }
         .fix-width{
-          width: 125px;
+          width: 120px;
           height: 30px;
-          margin: 0 58px 0 36px;
-          @media (max-width: 1366px) {
-            width: 120px;
-            margin: 0 35px 0 20px;
+          margin: 0 20px 0 10px;
+          .dropdown-menu{
+            min-width: 120px;
           }
         }
 
@@ -237,28 +153,28 @@ body{
           color: #969696;
         }
       }
-
+      .subhead{
+        font: 16px/30px "Microsoft Yahei";
+        margin: 0;
+        color: #333;
+      }
       .intro{
-        .subhead{
-          font: 22px/42px "Microsoft Yahei";
-          margin: 0;
-          color: #333;
-        }
+        @include mt();
         textarea{
           outline:none;
           resize:none;
           width:100%;
-          height: 164px;
+          height: 120px;
           border: 1px solid #777;
           box-sizing: border-box;
           padding: 16px;
-          margin-top: 24px;
+          margin-top: 10px;
           @include br(18px)
         }
       }
       .property{
         width: 100%;
-        margin-top: 26px;
+        @include mt();
         .property-list{
           margin-top: 24px;
           box-sizing: border-box;
@@ -268,9 +184,8 @@ body{
           table{
             margin: 0;
             tr{
-              height: 70px;
+              height: 30px;
               td{
-                font-size: 22px;
                 vertical-align: middle;
                 text-indent: 60px;
               }
@@ -288,9 +203,10 @@ body{
                 .del-btn{
                   display: inline-block;
                   position: absolute;
-                  width: 26px;
-                  height: 26px;
+                  width: 20px;
+                  height: 20px;
                   right: 30px;
+                  @include br(50%);
                   @include manbg(shanchu);
                   cursor: pointer;
                 }
@@ -299,22 +215,21 @@ body{
           }
         }
         .add-line{
-          font: 22px/74px 'Microsoft Yahei';
+          width: 80px;
+          line-height: 50px;
           color: #79b0cf;
           margin: 0;
           cursor: pointer;
         }
-
       }
       .thn{
         margin-top: 7px;
         .opa-pic{
-          margin-top: 26px;
+          @include mt();
           .opa{
-            font: 22px/42px 'Microsoft Yahei';
             box-sizing: border-box;
-            height: 250px;
-            padding: 26px 0 20px 30px;
+            height: 180px;
+            padding: 10px 0 20px 30px;
             display: inline-block;
             position: absolute;
             .file{
@@ -326,8 +241,6 @@ body{
               filter: alpha(opacity=0);
             }
             .uploading{
-              position: absolute;
-              top: 26px;
               background: none;
               color: #79b0cf;
               cursor: pointer;
@@ -343,33 +256,25 @@ body{
           }
         }
         img{
-          width: 280px;
-          height: 250px;
+          width: 200px;
+          height: 180px;
           @include br();
-          @media(max-width: 1366px){
-            width: 250px;
-            height: 220px;
-          }
         }
       }
       .pic-show{
         margin-top: 26px;
         .pic-list{
           display: inline-block;
-          margin:28px 40px 0 0;
+          margin:20px 30px 0 0;
           img{
-            width: 280px;
-            height: 250px;
+            width: 200px;
+            height: 180px;
             @include br();
-            @media(max-width: 1366px){
-              width: 220px;
-              height: 190px;
-            }
+
           }
           .opa{
-            font: 22px/72px "Microsoft Yahei";
             position: relative;
-
+            @include mt();
             span{
               cursor: pointer;
             }
@@ -392,53 +297,37 @@ body{
             }
           }
         }
-        .last{
-          width: 280px;
-          height: 250px;
-          position: relative;
-          top: -40px;
-          margin: 0;
-          border: 1px dashed #f3f2f2;
-          @include br();
-          @media(max-width: 1366px){
-            width: 220px;
-            height: 190px;
-          }
-          img{
-            border: none;
-          }
-          .opa{
-            position: absolute;
-            top: 90px;
-            left:104px;
-            .add-pic{
-              width: 75px;
-              height: 75px;
-              display: block;
-              @include manbg(add)
-            }
-            .file{
-              position: absolute;
-              top: 10px;
-            }
-          }
-        }
       }
     }
     .modal-content{ border-radius: 20px; padding-bottom: 18px;
       .modal-footer{ border-top: none;}
     }
 
-    .btn-e79cfae{ color: #fff; background-color: #79cfae; border-color: #79cfae; border-radius: 16px; min-width: 308px;}
+    .btn-e79cfae{ color: #fff; background-color: #79cfae; border-color: #79cfae; border-radius: 16px; min-width: bl(308);}
   }
 }
 #myModal{
+  .modal-dialog.modal-dialog-box{
+    width:300px!important;}
   .close{ opacity: 1; }
-  .btn-br{
-    border-radius: 16px;
+  .modal-header{
+    border-bottom: none;
   }
-  .btn-e79cfae{ color: #fff; background-color: #79cfae; border-color: #79cfae; }
+  .modal-body{
+    font-size: 16px;
+  }
+  .modal-footer{
+    text-align: center;
+    border-top: none;
+  }
+  .btn-br{
+    border-radius: 10px;
+    height: 30px;
+    padding: 0 20px;
+  }
 }
+
+.btn-e79cfae{ color: #fff; background-color: #79cfae; border-color: #79cfae;}
 //下拉菜单部分
 #classify-dropdown.dropdown .btn,#dialog-classify-dropdown.dropdown .btn{
   width: 100%;
@@ -446,6 +335,8 @@ body{
   height: 30px!important;
   border-radius: 10px!important;
   color: #5d5d5d;
+  padding-left: 13px;
+  text-align: left;
   a{
     color: #5d5d5d;
     text-decoration: none;

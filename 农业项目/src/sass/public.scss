@@ -1,17 +1,21 @@
 @import "common/index";
+body{
+  font: 16px/20px 'Microsoft Yahei';
+  background:#ececed;
+}
 .content-head {
   .content-title {
     float: left;
     margin: 0;
     padding-top: 4px;
-    font: bold 26px/94px '宋体';
+    font: bold 20px/50px '宋体';
     vertical-align: middle;
   }
   .create-item {
     float: right;
-    margin: 33px 50px 0 0;
-    padding: 0 23px 0 29px;
-    font: 20px/34px '宋体';
+    margin: 10px 12px ;
+    padding: 0 23px;
+    line-height: 30px;
     color: #fff;
     background: #fc6b6b;
     @include br();
@@ -20,7 +24,7 @@
   }
 }
 .indicator-list {
-  margin-top: 40px;
+  margin-top: 20px;
   overflow: hidden;
   @include bts();
   @include br();
@@ -29,26 +33,32 @@
   }
   thead {
     background: #79cfae;
-    td {
-      font: 18px/40px 'Microsoft Yahei';
-      padding: 0;
-      height: 40px;
-      color: #fff;
-      text-align: center;
+    tr{
+      td {
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+        text-align: center;
+        padding: 0;
+      }
     }
+
   }
   tbody {
     background: #fff;
     tr {
-      height: 84px;
+      height:30px;
       text-align: center;
       td {
-        font: 18px/84px 'Microsoft Yahei';
+       font-size: 14px;
+        line-height: 30px;
         padding: 0;
       }
     }
   }
   .last-td{
+    cursor: pointer;
+    color:#79b0cf;
     button{
       display: inline-block;
       background: none;
@@ -59,16 +69,16 @@
 }
 .page-btn {
   text-align: center;
-  margin-top: 106px;
+  margin-top: 20px;
   span {
     display: inline-block;
+    line-height:30px;
     margin: 0 5px;
-    font: 22px/44px 'Microsoft Yahei';
     box-shadow: 0 5px 5px #cdcdcd;
   }
   .nun-btn {
-    width: 44px;
-    height: 44px;
+    width:30px;
+    height: 30px;
     @include br(50%);
     background: #fff;
     color: #777;
@@ -80,11 +90,14 @@
     box-shadow: 0 5px 5px #dbe6e3;
     color: #fff;
   }
-  .prev, .next {
+  .prev,.next,.total {
     padding: 0 24px 0 20px;
     @include br(16px);
     background: #fff;
     cursor: pointer;
+  }
+  .total{
+    cursor: default;
   }
 }
 //单选按钮
@@ -93,7 +106,7 @@
   display: none;
 }
 .magic-radio + label {
-  font: 22PX/62PX 'Microsoft Yahei';
+  font-weight: normal;
   color: #333;
   position: relative;
   display: block;
@@ -107,8 +120,8 @@
   left: 0;
   margin-top: -9px;
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   @include br(50%);
   content: '';
   border: 1px solid #7a7a7a;

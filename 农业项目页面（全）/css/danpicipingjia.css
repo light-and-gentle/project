@@ -1,0 +1,261 @@
+@charset "UTF-8";
+.modal-dialog {
+    width: 800px; }
+ .modal-dialog .modal-header {
+    padding: 20px 30px;
+     margin-bottom:0;
+    border-bottom: none; }
+ .modal-dialog .close {
+    opacity: 1; }
+ .modal-dialog .modal-title {
+    font-size: 20px;
+    line-height: 50px;
+    color: #1c1d1d; }
+ .modal-dialog .modal-body {
+    padding: 0 40px; }
+ .modal-dialog .modal-body label {
+    font-weight: normal;
+    color: #1C1D1D; }
+ .modal-dialog .modal-body .form-control {
+    height: 30px;
+    border: 1px solid #777;
+    border-radius: 10px; }
+ .modal-dialog .modal-content {
+    border-radius: 20px;
+    padding-bottom: 18px; }
+ .modal-dialog .modal-content .modal-footer {
+    border-top: none; }
+ .modal-dialog .btn-e79cfae {
+    color: #fff;
+    background-color: #79cfae;
+    border-color: #79cfae;
+    border-radius: 16px;
+    min-width: 215.6px; }
+ .form-controltextarea{
+     border-radius: 12px;
+     width: 100%;border: 1px solid #777;
+     padding: 1em; }
+ .displacement{
+     padding: 5px 0;
+     margin-top:20px;
+ }
+ .dot{
+     display: inline-block;
+     width: 10px;
+     height: 10px;
+     border-radius: 100%;
+     background-color: #fc6b6b;
+     margin-right: 3px;
+ }
+ .dot-79b0cf{
+     display: inline-block;
+     width: 10px;
+     height: 10px;
+     border-radius: 100%;
+     background-color: #79b0cf;
+     margin-right: 3px;
+ }
+ textarea{ resize:none;}
+
+ /*  */
+.table-hoverhr { background-color: #fc6b6b;  }
+.table-hoverhr td{color: #fff; }
+ .table-hoverhr .last-td label{display: none}
+
+#evaluateModal .modal-footer .btn{ width: 120px; height: 30px; line-height: 30px; padding: 0; }
+.set-width{
+    width: 95%;
+    margin: 0 auto;
+}
+.border-bg{
+    background: #fff;
+    border: 1px solid #cecccc;
+    border-radius: 10px;
+}
+.border-br20{
+    border-radius: 20px;
+}
+/*.jisuan{ display: table; vertical-align: middle; }*/
+.jisuan input, .modalinput{ display: table-cell; height: 20px; width: 4em; margin: auto .5em; padding: 0 .5em; border-radius: 10px; }
+.jisuan button{ height: 20px; line-height: 20px; padding: 0 .5em; }
+/* .bs-example-modal-l .form-inline .form-group .form-control {
+  width: auto!important;
+} */
+
+
+ /* 关注度喜好-量化指标查询结果*/
+ #tab-navpingjia{
+     overflow: hidden;
+     padding: 15px 0;
+ }
+ #tab-navpingjia label{
+     font-weight:normal;
+     float: left;
+     background-color: #ffffff;
+     padding: .5em 1.5em;
+     color: #333333;
+     cursor: pointer;}
+ #tab-navpingjia label.active{
+     background-color: #79cfae;
+     color: #fefefe;
+ }
+ #tab-navpingjia label:first-child{
+     border-top-left-radius: 1em;
+     border-bottom-left-radius: 1em; }
+ #tab-navpingjia label:last-child{
+     border-top-right-radius: 1em;
+     border-bottom-right-radius: 1em; }
+ .jisuan-after{
+     color: #79b0cf;
+     padding: 0 .5em;
+ }
+ .jisuan-before{
+     color: #cacaca;
+     padding: 0 .5em;
+ }
+ .trfc6b6b{
+     background-color: #fc6b6b;
+ }
+ .trfc6b6b td,.tr79b0cf td{ color: #fff;
+ }
+ .tr79b0cf{
+     background-color: #79b0cf; }
+
+ .caozuo{
+     width: 100%;
+     overflow: hidden;
+     padding: 5px 0;
+ }
+
+ .caozuo a{
+     color: #777777;
+     padding-right: 1.5em;
+     text-decoration: none;
+ }
+ .caozuo .upload{
+     color: #777777;
+     padding-right: 1.5em;
+     cursor: pointer;
+ }
+ .caozuo .xia{
+     color: #79b0cf;
+ }
+ .caozuo .del{
+     float: right;
+ }
+ .btn-export{
+     height: 30px;
+     line-height: 30px;
+     background: #fc6b6b;
+     color:#fff;
+     padding: 0 1em;
+     width: auto;
+     border-radius: 8px;
+     box-shadow: 0 5px 5px #fedfdf, 0 -5px 5px #fedfdf, 5px 0 5px #fedfdf, -5px 0 5px #fedfdf;
+ }
+ /* 单批次评价-综合指标计算后*/
+ .item-info{
+     padding: 14px 10px 10px 10px;
+     background: #fff;
+     border-radius: 8px;
+     box-shadow: 0 5px 5px #cdcdce, 0 -5px 5px #cdcdce, 5px 0 5px #cdcdce, -5px 0 5px #cdcdce;
+ }
+ .form-group label {
+     font-weight: normal;
+     color: #333; }
+ .show-inline{
+     display: inline-block;
+ }
+ .show-inline .btn{
+     width: 120px !important;
+     height: 30px;
+     margin: 5px 15px;
+     box-sizing: border-box;
+     border: 1px solid #777;
+     border-radius: 12px;
+    text-align: left;
+ }
+ .btn-disabled{
+     color: #c9c9c9;
+     cursor: default;
+ }
+ #reportModal .modal-dialog .modal-body,
+ #reportModal .modal-dialog .modal-body.evaluateModal {
+     padding: 15px }
+ #reportModal .modal-dialog {
+     width: 800px;
+ }
+ #reportModal .modal-dialog .modal-body .form-group .form-control{
+     margin: 5px 15px;
+     width: 100px;
+ }
+ #reportModal .sample-list-title .form-control{
+    height: 20px;
+    margin: auto;
+ }
+ .tr79b0cf td{color: #fff; }
+ .tr79b0cf .last-td label{display: none}
+ .checkbox label{
+     padding-left: 18px!important;
+ }
+ .thumbnail{
+     border: none;
+     margin-bottom: 0;
+ }
+ .thumbnail .form-control{
+
+ }
+ .thumbnail img{
+    width: 100%;
+     border-radius: 10px;
+ }
+ .btn-e79cfae-sm{
+     height: 30px;
+     line-height: 30px;
+     padding: 0 40px;
+     margin-top:12px;
+     min-width: 0 !important;
+ }
+
+ .chart-container-bs{
+     height: 240px;
+     box-shadow: 0 5px 5px #cdcdce,
+     0 -5px 5px #cdcdce, 5px 0 5px #cdcdce,
+     -5px 0 5px #cdcdce;
+     border-radius: 8px;
+ }
+ .width-768{
+     width: 768px;
+ }
+ .width-685{
+     width: 685px;
+ }
+ /*单批次评价-综合指标评价编辑报告*/
+ .set-tit-width{
+     width: 33.666667%;
+     padding-right:0;
+ }
+ /* 单批次评价-综合评价生成报告*/
+ #evaluateModal .form-control{
+width: 120px;
+ }
+ #evaluateModal .col-xs-4{
+     padding-right:0;
+     margin: 10px 0;
+ }
+ .set-margin{
+     margin: 0!important;
+ }
+.set-margin-top{
+    margin-top: 20px;
+}
+ /*多批次评价-品种多批次评价（量化）*/
+ .set-label-line-height label{
+     line-height:1;
+ }
+.set-margin-top0{
+    margin-top: 0;
+}
+ 
+
+

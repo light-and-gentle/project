@@ -13,3 +13,6 @@
 @mixin br($nun:8px){
   border-radius: $nun;
 }
+@mixin mt($mt:20px){
+  margin-top:$mt;
+}

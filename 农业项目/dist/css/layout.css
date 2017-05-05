@@ -64,7 +64,7 @@ html, body {
 .main {
   min-width: 1340px;
   position: relative;
-  min-height: 100%;
+  min-height: 586px;
   margin-bottom: -82px;
   background: #ececed; }
   .main .sidebar {
@@ -74,7 +74,8 @@ html, body {
     width: 250px;
     top: 0;
     left: 0;
-    bottom: 0; }
+    bottom: 0;
+    height: 586px; }
     .main .sidebar .fold-icon {
       position: absolute;
       width: 20px;
@@ -164,7 +165,33 @@ html, body {
       .main .sidebar.folded .side-con {
         display: none; }
   .main .main-content {
-    padding: 0 24px 120px 300px;
+    padding: 0 24px 0 300px;
     background: #ececed; }
     .main .main-content.folded-main {
-      padding: 0 24px 120px 160px; }
+      padding: 0 24px 0 160px; }
+
+.tip {
+  position: fixed;
+  width: 400px;
+  top: -50px;
+  left: 50%;
+  font-size: 16px;
+  line-height: 50px;
+  margin-left: -200px;
+  transition: .3s;
+  color: #fff;
+  z-index: 2000;
+  border-radius: 0 0 3px 3px;
+  text-align: center; }
+
+.err, .ok, .warn {
+  top: 0; }
+
+.ok {
+  background: #75bc0f; }
+
+.err {
+  background: #f49918; }
+
+.warn {
+  background: #f49918; }

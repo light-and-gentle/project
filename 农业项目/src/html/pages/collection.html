@@ -27,7 +27,7 @@
     <form class=" form-inline">
         <div class="form-group">
             <label for="" class="control-label">标题</label>
-            <input type="text" class="form-control common-border text-center" id="" placeholder="">
+            <input type="text" class="common-border " id="" placeholder="">
         </div>
         <div class="form-group">
             <label for="" class="control-label">标签</label>
@@ -81,7 +81,7 @@
            </div>
            </div>
         </div>
-        <button  type="button" class="btn btn-check">查询</button>
+        <button  type="button" class=" btn-check">查询</button>
     </form>
 
 </div>
@@ -151,6 +151,84 @@
                 <button  type="button" class="del" data-toggle="modal" data-target="#modal-sm" data-backdrop="static" data-whatever="删除">删除</button>
             </td>
         </tr>
+        <tr>
+            <td>100001</td>
+            <td>生育期</td>
+            <td>无</td>
+            <td>描述指标</td>
+            <td><input type="text" class="list-common-border"> </td>
+            <td><span class="efficient">已生效</span></td>
+            <td class="last-td">
+                <button type="button" class="status-btn">失效</button>
+                <button type="button" class="detail" data-toggle="modal" data-target="#collect-modal" data-backdrop="static" data-whatever="查看指标" >详细</button>
+                <button type="button" class="del" data-toggle="modal" data-target="#modal-sm" data-backdrop="static" data-whatever="删除" disabled>删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>100002</td>
+            <td>熟性</td>
+            <td>无</td>
+            <td>描述指标</td>
+            <td><input type="text" class="list-common-border"></td>
+            <td><span class="efficient">已生效</span></td>
+            <td class="last-td">
+                <button  type="button" class="status-btn">失效</button>
+                <button  type="button" class="detail" data-toggle="modal" data-target="#collect-modal" data-backdrop="static" data-whatever="查看指标">详细</button>
+                <button  type="button" class="del" data-toggle="modal" data-target="#modal-sm" data-backdrop="static" data-whatever="删除">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>100003</td>
+            <td>生长习性</td>
+            <td>无</td>
+            <td>描述指标</td>
+            <td><input type="text" class="list-common-border"></td>
+            <td><span class="efficient">已生效</span></td>
+            <td class="last-td">
+                <button  type="button" class="status-btn">失效</button>
+                <button  type="button" class="detail" data-toggle="modal" data-target="#collect-modal" data-backdrop="static" data-whatever="查看指标">详细</button>
+                <button  type="button" class="del" data-toggle="modal" data-target="#modal-sm" data-backdrop="static" data-whatever="删除">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>100004</td>
+            <td>始花节位</td>
+            <td>无</td>
+            <td>描述指标</td>
+            <td><input type="text" class="list-common-border"></td>
+            <td><span class="efficient">未生效</span></td>
+            <td class="last-td">
+                <button  type="button" class="status-btn">失效</button>
+                <button  type="button" class="detail" data-toggle="modal" data-target="#collect-modal" data-backdrop="static" data-whatever="查看指标">详细</button>
+                <button  type="button" class="del" data-toggle="modal" data-target="#modal-sm" data-backdrop="static" data-whatever="删除">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>100003</td>
+            <td>生长习性</td>
+            <td>无</td>
+            <td>描述指标</td>
+            <td><input type="text" class="list-common-border"></td>
+            <td><span class="efficient">已生效</span></td>
+            <td class="last-td">
+                <button  type="button" class="status-btn">失效</button>
+                <button  type="button" class="detail" data-toggle="modal" data-target="#collect-modal" data-backdrop="static" data-whatever="查看指标">详细</button>
+                <button  type="button" class="del" data-toggle="modal" data-target="#modal-sm" data-backdrop="static" data-whatever="删除">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>100004</td>
+            <td>始花节位</td>
+            <td>无</td>
+            <td>描述指标</td>
+            <td><input type="text" class="list-common-border"></td>
+            <td><span class="efficient">未生效</span></td>
+            <td class="last-td">
+                <button  type="button" class="status-btn">失效</button>
+                <button  type="button" class="detail" data-toggle="modal" data-target="#collect-modal" data-backdrop="static" data-whatever="查看指标">详细</button>
+                <button  type="button" class="del" data-toggle="modal" data-target="#modal-sm" data-backdrop="static" data-whatever="删除">删除</button>
+            </td>
+        </tr>
 
         </tbody>
     </table>
@@ -161,6 +239,7 @@
     <span class="nun-btn">2</span>
     <span class="nun-btn">3</span>
     <span class="next">下页</span>
+    <span class="total">共n页</span>
 </div>
 <!-- 新建和详情对应的模态框（Modal） -->
 <div class="modal fade" id="collect-modal" tabindex="-1" role="dialog" aria-labelledby="collect-modalLabel">
@@ -213,7 +292,7 @@
                                 <input type="text" class="form-control " id="" placeholder="">
                             </div>
                         </div>
-                        <div class="form-group describe-box">
+                        <div class="describe-box">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">选项A</label>
                                 <div class="col-sm-8">
@@ -244,7 +323,7 @@
                             </div>
                         </div>
                         <!--量化指标-->
-                        <div class="form-group quantile-box">
+                        <div class=" quantile-box">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">选项A</label>
                                 <div class="col-sm-6">
@@ -300,7 +379,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="save-btn" class="btn btn-e79cfae btn-lg center-block">保存</button>
+                    <button type="button" id="save-btn" class="btn btn-e79cfae btn-lg center-block"  >保存</button>
                 </div>
             </div>
         </div>
@@ -316,6 +395,24 @@
             <div class="modal-footer" style="text-align: center;">
                 <button type="button" class="btn btn-default"  role="button">确定</button>
                 <button type="button" class="btn btn-default"  role="button"  data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--失效对应的弹框-->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">
+                    < img src="${contextPath}/static/images/manageImg/tanchuangguanbi.png" />
+                </button>
+            </div>
+            <div class="modal-body" id="myModal-context"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-br btn-e79cfae btn-size" id="sure" onclick="confirmFun()">确定</button>
+                <button type="button" class="btn btn-br btn-default" data-dismiss="modal">取消</button>
             </div>
         </div>
     </div>

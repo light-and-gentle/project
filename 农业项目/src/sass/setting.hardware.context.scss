@@ -1,8 +1,84 @@
 @import "common/index";
 .setting-content{
-  .tree-menu-content{
-    width: ;
+  .common-content{
+    display: inline-block;
+    width: 48%;
+    height: 520px;
+    padding: 20px 30px;
+    //margin-bottom: 100px;
+    background: #fff;
+    @include br(20px);
+   .menu-title{
+      font:bold 20px/38px '宋体';
+    }
   }
-  .hardware-content{}
+  .tree-menu-content{
+    float: left;
+    .tree-menu-icon{
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      @include manbg(jiantouyou)
+    }
+    .unfold{
+      @include manbg(jiantouxia)
+    }
+    .fold{
+      display: none;
+    }
+    button{
+      background: none;
+      color:#79b0cf;
+    }
+    .fst-menu span{
+      line-height: 30px;
+      cursor: pointer;
+    }
+    .snd-menu {
+      text-indent: 1em;
 
+      span{
+        cursor: pointer;
+      }
+      ul{
+        li{
+          text-indent: 3em;
+        }
+      }
+    }
+    .radio-distance{
+      label{
+        display: inline;
+        padding-left: 20px
+      }
+    }
+
+  }
+  .hardware-content{
+    float: right;
+    .device-content{
+      width: 100%;
+      height:bl(520);
+      @include mt();
+      padding: 15px 30px;
+      border: 1px solid #777;
+      @include br(18px);
+      label{
+        line-height: 40px;
+      }
+    }
+    .confirm-btn{
+      height: 40px;
+      margin-top: 20px;
+      color: #fff;
+      background-color: #79cfae;
+      border-color: #79cfae;
+      border-radius: 16px;
+      min-width: bl(308);
+    }
+  }
+
+}
+.tree-menu span{
+  cursor: pointer;
 }

@@ -1,0 +1,22 @@
+.modal-dialog.modal-dialog-box{ width:518px;  }
+.modal-header{ padding: 20px 15px; border-bottom:none!important; margin-bottom: 15px;}
+.modal-dialog.modal-dialog-box .modal-title{ font-size: 20px; line-height: 50px; color: #1c1d1d; }
+.modal-dialog.modal-dialog-box .modal-body{ padding: 0 60px; }
+.modal-dialog.modal-dialog-box .modal-body label { font-weight: normal; color: #1C1D1D; }
+.modal-dialog.modal-dialog-box .modal-content{ border-radius: 20px; padding-bottom: 18px;}
+.modal-dialog.modal-dialog-box .close{ opacity: 1; }
+.modal-dialog.modal-dialog-box .modal-body .form-group{ margin-bottom: 20px; }
+.modal-dialog.modal-dialog-box .modal-body .form-control{ height: 30px;border: 1px solid #777; border-radius: 10px; }
+.modal-dialog.modal-dialog-box .modal-body .form-control.dis{ background-color: #f3f2f2; }
+.modal-footer{ border-top: none;  }
+.btn-e79cfae{ color: #fff; background-color: #79cfae; border-color: #79cfae; border-radius: 16px; min-width: 215.6px;}
+.btn-e79cfae:hover{color: #fff}
+.modal-dialog.modal-dialog-box .modal-body .form-horizontal .control-label{ white-space: nowrap; }
+ #province.dropdown .btn,#city.dropdown .btn,#area.dropdown .btn,#category.dropdown .btn{ width: 100%; position: relative; height: 30px!important;border: 1px solid #777;border-radius: 10px!important;color: #5d5d5d;padding-left: 13px;text-align: left;}
+#province.dropdown .btn a,#city.dropdown .btn a,#area.dropdown .btn a,#category.dropdown .btn a{ color: #5d5d5d; text-decoration: none;}
+#modal-sm a.btn{ padding: 0 2em; }
+.has-error{ color: red; }
+#modal-sm a.btn:first-child{color: #fff; background-color: #79cfae; border-color: #79cfae; border-radius: 16px;}
+#modal-sm .modal-footer{border-top:none;}
+.dropdown .txt a,.dropdown-menu li a{color: #3a3b3b;text-align: left}
+#modal-sm .btn-br {line-height:30px;border-radius: 10px;height: 30px;padding: 0 20px;margin: 0 10px; }

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+.setting-content .common-content {
+  display: inline-block;
+  width: 48%;
+  height: 520px;
+  padding: 20px 30px;
+  background: #fff;
+  border-radius: 20px; }
+  .setting-content .common-content .menu-title {
+    font: bold 20px/38px '宋体'; }
+
+.setting-content .tree-menu-content {
+  float: left; }
+  .setting-content .tree-menu-content .tree-menu-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/manageImg/jiantouyou.png") no-repeat center center; }
+  .setting-content .tree-menu-content .unfold {
+    background: url("../images/manageImg/jiantouxia.png") no-repeat center center; }
+  .setting-content .tree-menu-content .fold {
+    display: none; }
+  .setting-content .tree-menu-content button {
+    background: none;
+    color: #79b0cf; }
+  .setting-content .tree-menu-content .fst-menu span {
+    line-height: 30px;
+    cursor: pointer; }
+  .setting-content .tree-menu-content .snd-menu {
+    text-indent: 1em; }
+    .setting-content .tree-menu-content .snd-menu span {
+      cursor: pointer; }
+    .setting-content .tree-menu-content .snd-menu ul li {
+      text-indent: 3em; }
+  .setting-content .tree-menu-content .radio-distance label {
+    display: inline;
+    padding-left: 20px; }
+
+.setting-content .hardware-content {
+  float: right; }
+  .setting-content .hardware-content .device-content {
+    width: 100%;
+    height: 364px;
+    margin-top: 20px;
+    padding: 15px 30px;
+    border: 1px solid #777;
+    border-radius: 18px; }
+    .setting-content .hardware-content .device-content label {
+      line-height: 40px; }
+  .setting-content .hardware-content .confirm-btn {
+    height: 40px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #79cfae;
+    border-color: #79cfae;
+    border-radius: 16px;
+    min-width: 215.6px; }
+
+.tree-menu span {
+  cursor: pointer; }

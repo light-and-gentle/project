@@ -1,0 +1,132 @@
+@import "common/index";
+.info-content{
+  width: 100%;
+  padding: 14px 10px 10px 10px;
+  background: #fff;
+  @include br();
+  @include bs();
+}
+.parameter-info{
+  .radio-label{
+    margin: 0 15px 0 0;
+  }
+}
+
+.chart-info{
+  @include mt();
+  #chart-container{
+    width: 100%;
+    height: 280px;
+  }
+}
+.form-group{
+  .control-label{
+    font-weight: normal;
+    color: #333;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .dropdown{
+    display: inline-block;
+  }
+}
+.form-control {
+  width: 130px !important;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #777;
+  @include br(12px);
+  margin: 5px 15px;
+  padding-left: 13px;
+  .dropdown-menu{
+    min-width: 120px;
+  }
+}
+//下拉菜单内文字
+.dropdown-menu a,.txt a{
+  color: #3a3b3b;
+  text-decoration: none;
+}
+//下拉菜单选中后的文字位置
+#site-greenhouse.dropdown .btn,
+#sensor.dropdown .btn,
+#sampling.dropdown .btn{
+  border: 1px solid #777;
+  padding-left: 13px;
+  text-align: left;
+}
+.top-distance{
+  margin-top: 10px;
+}
+.btn-e79cfae {
+  font-size: 16px;
+  color: #fff;
+  background-color: #79cfae;
+  border-color: #79cfae;
+  border-radius: 16px;
+  min-width: bl(308);
+}
+//报表预览弹框
+.modal-dialog.modal-dialog-box{
+  width:800px;
+  .modal-header{
+    padding: 20px 30px;
+    border-bottom: none;
+  }
+  .close{ opacity: 1; }
+  .modal-title{
+    font-size: 20px;
+    line-height:50px;
+    color: #1c1d1d;
+  }
+  .modal-body{
+    padding: 0 30px;
+    .report-table{
+      position: relative;
+      overflow: hidden;
+      height: 340px;
+      @include bts();
+      @include br();
+      label{
+        line-height: 30px;
+      }
+      table{
+        margin: 0;
+      }
+      thead{
+        background: #79cfae;
+
+        td{
+          height: 30px;
+          line-height:30px;
+          padding: 0;
+          color: #fff;
+          text-align: center;
+        }
+      }
+      tbody{
+        tr{
+          height: 30px;
+          text-align: center;
+          td{
+            color: #333;
+            font-size: 14px;
+            line-height:30px;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  .modal-content{ border-radius: 20px; padding-bottom: 18px;
+    .modal-footer{ border-top: none;}
+  }
+}
+//光辐射照度/CO2浓度
+.reduce-margin{
+margin: 5px;
+}
+.reduce-width{
+  width: 100px!important;
+}
+

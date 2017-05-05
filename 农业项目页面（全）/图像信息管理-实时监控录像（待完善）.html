@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>图像信息管理-历史监控截图</title>
+    <meta name="description" content="{description}" />
+    <meta name="keywords" content="{keywords}" />
+    <link rel="stylesheet" href="assets/scss/reset.css">
+    <link rel="stylesheet" href="assets/scss/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="css/layout.css"/>
+
+    <link rel="stylesheet" href="css/public.css" />
+    <link rel="stylesheet" href="css/collection.css" />
+
+</head>
+<body>
+<div class="functional">
+    <div class="title">蔬菜品评监控系统</div>
+    <div class="fun-btn">
+        <i class="icon computer"></i>
+        <i class="icon setting"></i>
+        <i class="icon switch"></i>
+    </div>
+    <div class="userinfo">
+        <div class="avatar"><img src="" alt=""></div>
+        <div class="login-info">
+            <div class="user">
+                <span class="user-name" title="">admin</span>
+                <span>，欢迎你</span>
+            </div>
+            <p class="data-time">
+                <span>2017年3月30日</span>
+                <span>20:00</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="sidebar">
+        <div class="fold-icon" id="fold"></div>
+        <div class="side-title-wrapper">
+            <h2 class="side-title">导航菜单</h2>
+        </div>
+
+        <ul class="side-nav">
+            <li class="side-info active">
+                <i class="side-icon variety "></i>
+                <h2 class="side-tit"> 品种信息管理</h2>
+                <ul class="side-con">
+                    <li class="current item-hook" data-name="index">品种管理</li>
+                    <li class="item-hook" data-name="batch">评价批次管理</li>
+                </ul>
+            </li>
+            <li class="side-info">
+                <i class="side-icon collect"></i>
+                <h2 class="side-tit">采集指标管理</h2>
+                <ul class="side-con">
+                    <li class="item-hook" data-name="collection">指标库管理</li>
+                </ul>
+
+            </li>
+            <li class="side-info">
+                <i class="side-icon  img-info"></i>
+                <h2 class="side-tit">图像信息管理</h2>
+                <ul class="side-con">
+                    <li class="item-hook">实时监控影像</li>
+                    <li class="item-hook">历史监控截图</li>
+                </ul>
+            </li>
+            <li class="side-info">
+                <i class="side-icon env"></i>
+                <h2 class="side-tit">环境信息管理</h2>
+                <ul class="side-con">
+                    <li class="item-hook">空气温度</li>
+                    <li class="item-hook">空气湿度</li>
+                    <li class="item-hook">土壤温度</li>
+                    <li class="item-hook">土壤湿度</li>
+                    <li class="item-hook">光辐射照度</li>
+                    <li class="item-hook">CO2浓度</li>
+                    <li class="item-hook">土壤PH值</li>
+                    <li class="item-hook">土壤EC值</li>
+                </ul>
+
+            </li>
+            <li class="side-info">
+                <i class="side-icon analyze"></i>
+                <h2 class="side-tit">综合评价分析</h2>
+                <ul class="side-con">
+                    <li class="item-hook">单批次评价</li>
+                    <li class="item-hook">评价展示设置</li>
+                    <li class="item-hook">多批次评价</li>
+                    <li class="item-hook">过往报告</li>
+                    <li class="item-hook">关注度/喜好</li>
+                </ul>
+
+            </li>
+            <li class="side-info">
+                <i class="side-icon sys-setting"></i>
+                <h2 class="side-tit">系统设置</h2>
+                <ul class="side-con">
+                    <li class="item-hook">用户设置</li>
+                    <li class="item-hook">硬件关联配置</li>
+                </ul>
+
+            </li>
+            <li class="side-info">
+                <i class="side-icon dictionary"></i>
+                <h2 class="side-tit">数据字典</h2>
+                <ul class="side-con">
+                    <li class="item-hook">蔬菜主分类</li>
+                    <li class="item-hook">站点字典</li>
+                    <li class="item-hook">总部摄像头</li>
+                    <li class="item-hook">总部传感器</li>
+                    <li class="item-hook">地区字典</li>
+                </ul>
+
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="content-head clearfix">
+            <h2 class="content-title">
+                实时监控影像
+            </h2>
+        </div>
+        <div class="item-info">
+            <form class=" form-inline">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label for="" class="control-label">站点大棚</label>
+                            <div class="form-control common-border">
+                                <div class="dropdown hidden-xs" id="collect-lable-dropdown" style="width: 100%">
+                                    <button style="width: 100%; position: relative;" class="btn btn-default dropdown-toggle " type="button" id="dropdownMenu1"  aria-haspopup="true" data-toggle="dropdown" aria-expanded="true">
+                                        <span class="txt">Dropdown</span>
+                                        <img style="position: absolute; right: 5px; top: 45%;"  src="./images/manageImg/xialajiantou.png">
+                                    </button>
+                                    <ul style="width: 100%;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                        <li><a data-value='111'href="javascript:;">Action</a></li>
+                                        <li><a href="javascript:;">Another action</a></li>
+                                        <li><a href="javascript:;">Something </a></li>
+                                        <li><a href="javascript:;">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label for="" class="control-label">设备</label>
+                            <div class="form-control common-border">
+                                <div class="dropdown hidden-xs" id="collect-indicator" style="width: 100%">
+                                    <button style="width: 100%; position: relative;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"  aria-haspopup="true" data-toggle="dropdown" aria-expanded="true">
+                                        <span class="txt">Dropdown</span>
+                                        <img style="position: absolute; right: 5px; top: 45%;"  src="./images/manageImg/xialajiantou.png">
+                                    </button>
+                                    <ul style="width: 100%;" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                        <li><a data-value='111'href="javascript:;">Action</a></li>
+                                        <li><a href="javascript:;">Another action</a></li>
+                                        <li><a href="javascript:;">Something </a></li>
+                                        <li><a href="javascript:;">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 pull-right">
+                        <button type="button" class=" btn-check">查询</button>
+                    </div>
+                    <div class="col-xs-3 pull-right">
+                        <img style="margin-left: 5px;" src="./images/icon/imghis1.png" alt="..." class="">
+                        <img style="margin-left: 5px;" src="./images/icon/imghis2.png" alt="..." class="">
+                        <img style="margin-left: 5px;" src="./images/icon/imghis3.png" alt="..." class="">
+                        <img style="margin-left: 5px;" src="./images/icon/imghis4-ati.png" alt="..." class="">
+                    </div>
+                </div>
+                <div>
+
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-xs-3 img-preview" data-toggle="modal" data-target="#surveillance-video" data-whatever="1号大棚 CH1 2017/01/22 08:12:12(上午)" data-src="mp4/iceAge.mp4">
+                            <video  poster="./images/icon/yl.png">
+                                <source src="movie.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div>
+                                <img style="width: 35px;" src="./images/icon/vi.png">
+                                <p>1号大棚CH1</p>
+                                <p>已连接</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 img-preview" data-toggle="modal" data-target="#surveillance-video" data-whatever="1号大棚 CH1 2017/01/22 08:12:12(上午)" data-src="./images/icon/yl.png">
+                            <video  poster="./images/icon/yl.png">
+                                <source src="movie.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div>
+                                <img style="width: 35px;" src="./images/icon/vi.png">
+                                <p>1号大棚 CH1</p>
+                                <p>已连接</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="page-btn">
+                    <span class="prev">上页</span>
+                    <span class="nun-btn nun-active">1</span>
+                    <span class="nun-btn">2</span>
+                    <span class="nun-btn">3</span>
+                    <span class="next">下页</span>
+                    <span class="total">共n页</span>
+                </div>
+            </form>
+
+
+        </div>
+
+        <!--弹出框-->
+        <div class="modal fade" id="surveillance-video" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <img src="images/icon/close.png"></button>
+                        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                    </div>
+                    <div id="lgpreview" class="video-content">
+                        <video id="myVideo">
+                            <source src="movie.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="control-bar">
+                            <a href="javascript:;" class="btn-Play" id=""></a>
+                            <a href="javascript:;" class="capture"></a>
+                            <a href="javascript:;" class="muted" ></a>
+                            <a href="javascript:;" class="video-scaling">
+                                <span class="arrow-up"></span>
+                                <span class="arrow-down"></span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/jquery-2.2.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="js/base.js"></script>
+<script>
+    //    页面下拉菜单
+    $('#collect-lable-dropdown').one('show.bs.dropdown', function () {
+        var _seft = $(this);
+        var obutton = _seft.find('button').find('.txt');
+        _seft.find('li').on('click', function(ev){
+            obutton.html($(this).html());
+        })
+    });
+
+    $(' #collect-indicator').one('show.bs.dropdown', function () {
+        var _seft = $(this);
+        var obutton = _seft.find('button').find('.txt');
+        _seft.find('li').on('click', function(ev){
+            obutton.html($(this).html());
+        })
+    });
+    //弹出视频
+    $('#surveillance-video').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);// Button that triggered the modal
+        var recipient = button.data('whatever'); // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var modal = $(this);
+        modal.find('#lgpreview').find('video').attr('src', button.data('src'));
+        modal.find('.modal-title').text(recipient);
+//        $(".capture").click(captureImage);
+//        console.log(captureImageUrl)
+    });
+    var video = $("#myVideo").get(0);
+    //播放视频
+    $('.btn-Play').click(togglePlayPause);
+    function togglePlayPause(){
+        if (video.paused) {
+            $('.btn-Play').addClass('btn-pause');
+
+            video.play();
+        }
+        else {
+            $('.btn-Play').removeClass('btn-pause');
+            video.pause();
+        }
+    }
+    //视频截图
+    var scale = 1;//比例
+    var captureImageUrl = [];
+    var captureImage = function() {
+        var canvas = document.createElement("canvas");
+        canvas.width = video.videoWidth * scale;
+        canvas.height = video.videoHeight * scale;
+        canvas.getContext('2d')
+                .drawImage(video, 0, 0, canvas.width, canvas.height);
+        captureImageUrl.push(canvas.toDataURL());
+        console.log(captureImageUrl)
+    };
+    $(".capture").click(captureImage);
+    console.log(captureImageUrl)
+    //调节大小
+    $('.arrow-up').click();
+    $('.arrow-down').click();
+    //声音
+    $('.muted').click(toggleMute);
+
+    function toggleMute() {
+        if(video.muted){
+            $('.muted').removeClass('muted-kai')
+
+        }else {
+            $('.muted').addClass('muted-kai')
+        }
+        video.muted = !video.muted;
+
+    }
+
+
+
+
+</script>
+</body>
+</html>

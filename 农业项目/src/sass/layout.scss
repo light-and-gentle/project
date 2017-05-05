@@ -81,7 +81,7 @@ html,body{
   min-width:1340px;
   position: relative;
   //页面高度
-  min-height: 100%;
+  min-height: 586px;
   margin-bottom: -82px;
   background: #ececed;
   .sidebar{
@@ -92,8 +92,7 @@ html,body{
     top: 0;
     left: 0;
     bottom: 0;
-    //margin-bottom: -99999px;
-    //padding-bottom: 99999px;
+    height: 586px;
     .fold-icon{
       position: absolute;
       width: 20px;
@@ -106,14 +105,12 @@ html,body{
       height: 70px;
     }
     .side-title{
-      //padding: 0 44px 0 36px;
       font: 22px/70px "Microsoft Yahei";
       color: #79cfae;
       text-align: center;
     }
 
     .side-info{
-      //padding: 0 42px 0 38px;
       font-size: 0;
       min-height: 48px;
       h2{
@@ -214,14 +211,39 @@ html,body{
       .side-con{display: none}
     }
   }
-
   .main-content{
-    //min-width: 1200px;
-    padding: 0 24px 120px 300px;
+    padding: 0 24px 0 300px;
     background: #ececed;
-
     &.folded-main{
-      padding: 0 24px 120px 160px;
+      padding: 0 24px 0 160px;
     }
   }
+}
+
+//tips样式
+.tip{
+  position: fixed;
+  width: 400px;
+  top: -50px;
+  left: 50%;
+  font-size: 16px;
+  line-height: 50px;
+  margin-left: -200px;
+  transition:.3s;
+  color: #fff;
+  z-index: 2000;
+  border-radius: 0 0 3px 3px;
+  text-align: center;
+}
+.err,.ok,.warn{
+  top:0;
+}
+.ok {
+  background: #75bc0f;
+}
+.err{
+  background: #f49918;
+}
+.warn{
+  background: #f49918;
 }

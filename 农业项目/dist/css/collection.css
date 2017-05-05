@@ -1,27 +1,35 @@
 .item-info {
-  padding: 32px 50px;
+  padding: 14px 10px 10px 10px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 5px 5px #cdcdce, 0 -5px 5px #cdcdce, 5px 0 5px #cdcdce, -5px 0 5px #cdcdce; }
   .item-info .category {
     display: inline-block;
-    font: 22px/62px 'Microsoft Yahei';
     vertical-align: middle; }
 
+.common-border {
+  width: 120px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #777;
+  border-radius: 12px;
+  margin: 5px 15px;
+  padding-left: 13px; }
+
 .form-inline .form-group label {
-  font-size: 20px;
   font-weight: normal;
   color: #333; }
 
 .form-inline .form-group .form-control {
-  width: 125px !important;
-  height: 32px;
+  width: 120px !important;
+  height: 30px;
   box-sizing: border-box;
   border: 1px solid #777;
-  font-size: 18px;
   border-radius: 12px;
-  margin: 10px 30px 0 20px;
+  margin: 5px 15px;
   padding: 0 !important; }
+  .form-inline .form-group .form-control .dropdown-menu {
+    min-width: 120px; }
 
 .dropdown-menu a, .txt a {
   color: #3a3b3b;
@@ -32,9 +40,11 @@
 #collect-state.dropdown .btn {
   width: 100%;
   position: relative;
-  height: 30px !important;
+  height: 28px !important;
   border: none !important;
-  border-radius: 10px !important; }
+  border-radius: 10px !important;
+  padding-left: 13px;
+  text-align: left; }
 
 .status-btn {
   color: #FC6B6B; }
@@ -52,8 +62,8 @@
 
 .btn-check {
   float: right;
-  width: 131px;
-  font: 20px/30px 'Microsoft Yahei';
+  width: 116px;
+  height: 30px;
   color: #fff;
   text-align: center;
   background: #79cfae;
@@ -70,28 +80,27 @@
 
 .list-common-border {
   width: 102px;
-  height: 30px;
+  height: 24px;
   border: 1px solid #777;
   font-size: 16px;
   border-radius: 12px;
   text-align: center; }
 
 .modal-dialog.modal-dialog-box {
-  width: 745px; }
+  width: 520.8px; }
 
 .modal-dialog.modal-dialog-box .modal-header {
-  padding: 45px 58px;
-  border-bottom: none;
-  margin-bottom: 15px; }
+  padding: 20px 40px;
+  border-bottom: none; }
 
 .modal-dialog.modal-dialog-box .modal-title {
-  font-size: 28px;
+  font-size: 20px;
+  line-height: 50px;
   color: #1c1d1d; }
 
 .modal-dialog.modal-dialog-box .modal-body {
-  padding: 0 86px; }
+  padding: 0 60px; }
   .modal-dialog.modal-dialog-box .modal-body label {
-    font-size: 18px;
     font-weight: normal;
     color: #1C1D1D; }
 
@@ -103,34 +112,42 @@
   opacity: 1; }
 
 .modal-dialog.modal-dialog-box .modal-body .form-group {
-  margin-bottom: 30px; }
+  margin-bottom: 20px; }
 
 .dis {
   background-color: #f3f2f2; }
 
 .modal-dialog.modal-dialog-box .modal-body .form-control {
   height: 30px;
+  border: 1px solid #777;
   border-radius: 10px; }
 
 .modal-dialog.modal-dialog-box .modal-content .modal-footer {
-  border-top: none;
-  padding: 40px; }
+  border-top: none; }
 
 .btn-e79cfae {
+  font-size: 16px;
   color: #fff;
   background-color: #79cfae;
   border-color: #79cfae;
   border-radius: 16px;
-  min-width: 308px; }
+  min-width: 215.6px; }
+
+.btn-e79cfae:hover {
+  color: #fff; }
 
 .modal-dialog.modal-dialog-box .modal-body .form-horizontal .control-label {
-  white-space: nowrap; }
+  white-space: nowrap;
+  padding-top: 0 !important; }
 
 #collect-dialog-classify.dropdown .btn {
   width: 100%;
   position: relative;
   height: 30px !important;
-  border-radius: 10px !important; }
+  border: 1px solid #777;
+  border-radius: 10px !important;
+  padding-left: 13px;
+  text-align: left; }
 
 #collect-modal .fruit-icon {
   display: inline-block;
@@ -155,13 +172,12 @@
   background: url("../images/manageImg/xinxuanzhong.png") no-repeat center center; }
 
 #collect-modal .del-option {
+  font-size: 16px;
   background: none;
-  font-size: 22px;
   color: #FC6B6B; }
 
 #collect-modal .add-option {
   background: none;
-  font-size: 22px;
   color: #79B0CF; }
 
 #collect-modal .quantile-box {
@@ -172,12 +188,36 @@
 
 #modal-sm .btn {
   height: 30px;
-  line-height: 30px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  padding: 0 20px; }
   #modal-sm .btn:first-child {
     color: #fff;
     background-color: #79cfae;
-    border-color: #79cfae; }
+    border-color: #79cfae;
+    margin-right: 10px; }
 
 #modal-sm .modal-footer {
   border-top: none; }
+
+#myModal .close {
+  opacity: 1; }
+
+#myModal .modal-header {
+  border-bottom: none; }
+
+#myModal .modal-body {
+  font-size: 18px;
+  text-align: center; }
+
+#myModal .modal-footer {
+  text-align: center;
+  border-top: none; }
+
+#myModal .btn-br {
+  border-radius: 10px;
+  height: 30px;
+  padding: 0 20px;
+  margin: 0 20px; }
+
+#myModal .btn-size {
+  min-width: 0; }
